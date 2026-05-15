@@ -1,0 +1,173 @@
+{
+  "chatbot": [
+    "close",
+    "open",
+    "placeholder",
+    "reply1",
+    "reply2",
+    "reply3",
+    "send",
+    "subtitle",
+    "title",
+    "welcome"
+  ],
+  "pageLoader": [
+    "initializing"
+  ],
+  "common": [
+    "brand",
+    "caseStudy",
+    "copyright",
+    "ctaExplore",
+    "healthy",
+    "livePreview",
+    "privacy",
+    "submitting",
+    "subscribe",
+    "terms",
+    "thanksNewsletter"
+  ],
+  "about": [
+    "eyebrow",
+    "footnote",
+    "mission",
+    "missionLabel",
+    "title",
+    "vision",
+    "visionLabel"
+  ],
+  "achievements": [
+    "eyebrow",
+    "title"
+  ],
+  "forms.application": [
+    "attachment",
+    "budget",
+    "companyName",
+    "deadline",
+    "description",
+    "dropzone",
+    "dropzoneHint",
+    "email",
+    "errorGeneric",
+    "eyebrow",
+    "fullName",
+    "lead",
+    "selectBudget",
+    "selectService",
+    "serviceType",
+    "submit",
+    "success",
+    "telegram",
+    "title"
+  ],
+  "forms.validation": [
+    "budget",
+    "companyName",
+    "deadline",
+    "email",
+    "fullName",
+    "projectDescription",
+    "serviceType",
+    "telegramUsername"
+  ],
+  "forms.placeholders": [
+    "company",
+    "description",
+    "email",
+    "fullName",
+    "telegram"
+  ],
+  "contact": [
+    "emailTitle",
+    "eyebrow",
+    "hqLine",
+    "hqTitle",
+    "lead",
+    "mapTitle",
+    "phoneTitle",
+    "telegramTitle",
+    "title"
+  ],
+  "faq": [
+    "eyebrow",
+    "title"
+  ],
+  "hero": [
+    "badge",
+    "ctaPrimary",
+    "ctaSecondary",
+    "headlineAfter",
+    "headlineBefore",
+    "headlineHighlight",
+    "holoSignal",
+    "holoSubtitle",
+    "holoTitle",
+    "mockLiveStack",
+    "mockNeuralSubtitle",
+    "mockNeuralTitle",
+    "orbitalSubtitle",
+    "orbitalTitle",
+    "statClients",
+    "statClientsLabel",
+    "statProjects",
+    "statProjectsLabel",
+    "statYears",
+    "statYearsLabel",
+    "subtitle"
+  ],
+  "portfolio": [
+    "eyebrow",
+    "filterAll",
+    "title"
+  ],
+  "pricing": [
+    "eyebrow",
+    "popular",
+    "title"
+  ],
+  "process": [
+    "eyebrow",
+    "title"
+  ],
+  "services": [
+    "eyebrow",
+    "subtitle",
+    "title"
+  ],
+  "team": [
+    "eyebrow",
+    "socialGitHub",
+    "socialLinkedIn",
+    "socialTwitter",
+    "title"
+  ],
+  "technologies": [
+    "eyebrow",
+    "title"
+  ],
+  "testimonials": [
+    "eyebrow",
+    "title"
+  ],
+  "trusted": [
+    "eyebrow"
+  ],
+  "footer": [
+    "navLabel",
+    "newsletterPlaceholder",
+    "servicesLabel",
+    "socialLabel",
+    "startProject",
+    "tagline"
+  ],
+  "nav": [
+    "home",
+    "language",
+    "openMenu",
+    "startProject"
+  ],
+  "subnav": [
+    "backHome"
+  ]
+}
