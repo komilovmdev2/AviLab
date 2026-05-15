@@ -1,0 +1,428 @@
+{
+  "common": {
+    "brand": "AviLab",
+    "ctaStart": "Start Project",
+    "ctaExplore": "Explore",
+    "livePreview": "Live preview",
+    "caseStudy": "Case study",
+    "healthy": "Healthy",
+    "submitting": "Sending…",
+    "subscribe": "Subscribe",
+    "thanksNewsletter": "Thanks—watch your inbox.",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "copyright": "All rights reserved."
+  },
+  "meta": {
+    "home": {
+      "title": "AviLab — Building The Future With AI & Technology",
+      "description": "AviLab creates world-class AI systems, websites, mobile applications, enterprise platforms, and digital experiences for modern businesses.",
+      "keywords": "AviLab, AI development, Next.js agency, enterprise software, UI UX, cloud, SaaS",
+      "ogTitle": "AviLab — Elite AI & Technology Studio",
+      "ogDescription": "Futuristic engineering and design for teams that need Silicon Valley-grade execution.",
+      "twitterTitle": "AviLab",
+      "twitterDescription": "Building the future with AI & technology."
+    },
+    "services": {
+      "title": "Services",
+      "description": "Full-spectrum AI, product, and cloud capabilities engineered for ambitious teams."
+    },
+    "portfolio": {
+      "title": "Portfolio",
+      "description": "Selected launches, platforms, and AI systems crafted with cinematic quality."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Reach AviLab for partnerships, briefings, and enterprise engagements."
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "team": "Team",
+    "achievements": "Achievements",
+    "contact": "Contact",
+    "startProject": "Start Project",
+    "openMenu": "Toggle menu",
+    "language": "Language"
+  },
+  "pageLoader": {
+    "initializing": "Initializing laboratory"
+  },
+  "chatbot": {
+    "title": "AviLab Assistant",
+    "subtitle": "Demo concierge • not live AI",
+    "close": "Close chat",
+    "placeholder": "Ask AviLab…",
+    "send": "Send message",
+    "open": "Open AviLab assistant",
+    "welcome": "Hi—I'm AviLab's concierge. Ask about services, timelines, or how we work with AI.",
+    "reply1": "We build production AI, web, and mobile systems with Silicon Valley-grade polish. Tell me your timeline and stack preferences.",
+    "reply2": "For enterprise work, we typically pair a technical architect with design lead. Want a scoping call this week?",
+    "reply3": "Upload a brief in the client application section—our team reviews every submission within 24 hours."
+  },
+  "hero": {
+    "badge": "Elite AI engineering studio",
+    "headlineBefore": "AviLab — Building",
+    "headlineHighlight": "The Future",
+    "headlineAfter": "With AI & Technology",
+    "subtitle": "We create world-class AI systems, websites, mobile applications, enterprise platforms, and digital experiences for modern businesses.",
+    "ctaPrimary": "Start Your Project",
+    "ctaSecondary": "Explore Portfolio",
+    "statProjectsLabel": "Shipped initiatives",
+    "statClientsLabel": "Global clients",
+    "statYearsLabel": "Product excellence",
+    "statProjects": "120+",
+    "statClients": "50+",
+    "statYears": "5+ yrs",
+    "mockLiveStack": "Live stack",
+    "mockInference": "Inference",
+    "mockVector": "Vector DB",
+    "mockEdge": "Edge CDN",
+    "mockNeuralTitle": "Neural pipeline",
+    "mockNeuralSubtitle": "Autonomous quality loop",
+    "holoTitle": "Holographic UI",
+    "holoSubtitle": "Realtime insight cards",
+    "holoSignal": "Signal",
+    "orbitalTitle": "Orbital compute",
+    "orbitalSubtitle": "Multi-region mesh"
+  },
+  "trusted": {
+    "eyebrow": "Trusted by teams who ship at scale"
+  },
+  "services": {
+    "eyebrow": "Capabilities",
+    "title": "Full-spectrum engineering for ambitious products",
+    "subtitle": "From neural systems to brand motion—every surface is considered, measured, and refined.",
+    "items": {
+      "aiDev": {
+        "title": "AI Development",
+        "description": "Custom models, RAG pipelines, agents, and production-grade ML systems tailored to your domain."
+      },
+      "webDev": {
+        "title": "Web Development",
+        "description": "High-performance Next.js platforms, dashboards, and marketing sites engineered for scale."
+      },
+      "mobile": {
+        "title": "Mobile Apps",
+        "description": "Native-feel Flutter and cross-platform experiences with obsessive polish and reliability."
+      },
+      "uiux": {
+        "title": "UI/UX Design",
+        "description": "Product design systems, motion, and interfaces that feel inevitable—clear, calm, premium."
+      },
+      "crmErp": {
+        "title": "CRM & ERP Systems",
+        "description": "Operational software that unifies sales, inventory, and workflows across your organization."
+      },
+      "telegramBots": {
+        "title": "Telegram Bots",
+        "description": "Automation, onboarding, support, and commerce flows inside Telegram—fast and secure."
+      },
+      "saas": {
+        "title": "SaaS Platforms",
+        "description": "Multi-tenant architecture, billing, auth, and analytics for serious software businesses."
+      },
+      "cloud": {
+        "title": "Cloud Infrastructure",
+        "description": "AWS, containers, observability, and cost-aware architecture built for uptime and velocity."
+      },
+      "branding": {
+        "title": "Branding & Motion",
+        "description": "Identity, launch films, and micro-interactions that signal category leadership."
+      },
+      "security": {
+        "title": "Cybersecurity",
+        "description": "Hardening, reviews, and secure SDLC practices so your product earns enterprise trust."
+      }
+    },
+    "pageTitle": "Services that ship",
+    "pageLead": "Strategy, design, and engineering under one roof—so your roadmap moves at founder speed without sacrificing enterprise rigor."
+  },
+  "about": {
+    "eyebrow": "About AviLab",
+    "title": "A laboratory for products that define categories",
+    "missionLabel": "Mission:",
+    "mission": "Ship intelligent systems and interfaces that feel inevitable—fast, secure, and beautiful enough for the world's most demanding users.",
+    "visionLabel": "Vision:",
+    "vision": "Become the default partner for teams who treat software as a competitive moat, not a cost center.",
+    "values": {
+      "v1": "Velocity with taste",
+      "v2": "Security by default",
+      "v3": "Radical clarity"
+    },
+    "stats": {
+      "projects": "Projects",
+      "clients": "Clients",
+      "years": "Years experience",
+      "countries": "Countries"
+    },
+    "footnote": "International team • async-first • on-site when it matters"
+  },
+  "technologies": {
+    "eyebrow": "Stack",
+    "title": "Technologies we deploy in production"
+  },
+  "portfolio": {
+    "eyebrow": "Portfolio",
+    "title": "Case studies with cinematic craft",
+    "filterAll": "All",
+    "categories": {
+      "ai": "AI",
+      "web": "Web",
+      "mobile": "Mobile",
+      "design": "Design",
+      "enterprise": "Enterprise"
+    },
+    "items": {
+      "nexusAi": { "title": "Nexus AI Copilot" },
+      "pulseAnalytics": { "title": "Pulse Analytics Cloud" },
+      "orbitMobile": { "title": "Orbit Mobile Banking" },
+      "lumenDesign": { "title": "Lumen Design System" },
+      "vertexErp": { "title": "Vertex ERP Suite" },
+      "helixVision": { "title": "Helix Vision Lab" }
+    },
+    "pageTitle": "Work that raises the bar",
+    "pageLead": "A curated set of AI, web, mobile, and enterprise programs delivered with obsessive craft."
+  },
+  "process": {
+    "eyebrow": "Process",
+    "title": "A cinematic path from idea to orbit",
+    "steps": {
+      "discovery": {
+        "title": "Discovery",
+        "detail": "Goals, constraints, and success signals—documented with clarity."
+      },
+      "planning": {
+        "title": "Planning",
+        "detail": "Architecture, milestones, and risk maps aligned to your runway."
+      },
+      "design": {
+        "title": "Design",
+        "detail": "Product UX, systems, and motion that feel inevitable in the hand."
+      },
+      "development": {
+        "title": "Development",
+        "detail": "Typed, tested, observable code paths with CI from day one."
+      },
+      "testing": {
+        "title": "Testing",
+        "detail": "Performance, security, and realism under production load profiles."
+      },
+      "deployment": {
+        "title": "Deployment",
+        "detail": "Progressive rollout, monitoring, and playbooks your team owns."
+      }
+    }
+  },
+  "team": {
+    "eyebrow": "Team",
+    "title": "Architects, designers, and operators in one crew",
+    "members": {
+      "alex": { "role": "Founder & CTO" },
+      "maya": { "role": "Lead Product Designer" },
+      "daniel": { "role": "Principal Engineer" },
+      "sofia": { "role": "AI Research Lead" }
+    },
+    "socialLinkedIn": "LinkedIn",
+    "socialGitHub": "GitHub",
+    "socialTwitter": "Twitter"
+  },
+  "achievements": {
+    "eyebrow": "Achievements",
+    "title": "Proof from arenas that don't forgive mediocrity",
+    "items": {
+      "aiSummit": {
+        "title": "Global AI Summit — Best Applied Research",
+        "detail": "Recognized for production RAG architecture at enterprise scale."
+      },
+      "awsPartner": {
+        "title": "AWS Advanced Tier Partner",
+        "detail": "Certified cloud delivery and well-architected implementations."
+      },
+      "hackathon": {
+        "title": "International Hackathon — Grand Prize",
+        "detail": "First place among 120 teams for real-time intelligence platform."
+      },
+      "iso27001": {
+        "title": "ISO 27001 Alignment",
+        "detail": "Security program mapped to enterprise procurement requirements."
+      },
+      "fortune500": {
+        "title": "Fortune 500 Launch Partner",
+        "detail": "Shipped mission-critical internal tools for a global retailer."
+      }
+    }
+  },
+  "testimonials": {
+    "eyebrow": "Testimonials",
+    "title": "Trusted by leaders who ship under pressure",
+    "goToSlide": "Show testimonial {n}",
+    "items": {
+      "jordan": {
+        "quote": "AviLab operates like an embedded product team—velocity, taste, and engineering depth we rarely see.",
+        "role": "VP Engineering, Northwind"
+      },
+      "elena": {
+        "quote": "They turned a vague AI idea into a polished platform our executives actually use every day.",
+        "role": "Chief Product Officer, Lumen"
+      },
+      "marcus": {
+        "quote": "The attention to motion, typography, and performance is Silicon Valley-grade. Our conversion proved it.",
+        "role": "CEO, Atlas Commerce"
+      }
+    }
+  },
+  "pricing": {
+    "eyebrow": "Pricing preview",
+    "title": "Engagements shaped like partnerships—not invoices",
+    "popular": "Most popular",
+    "plans": {
+      "startup": {
+        "name": "Startup",
+        "price": "From $12k",
+        "blurb": "For founders validating a bold MVP with design + engineering.",
+        "cta": "Book discovery",
+        "features": [
+          "Product strategy workshop",
+          "Design system starter",
+          "Next.js / mobile slice",
+          "2-week iteration cadence"
+        ]
+      },
+      "business": {
+        "name": "Business",
+        "price": "From $48k",
+        "blurb": "For teams scaling revenue with reliable platforms and AI features.",
+        "cta": "Start scope",
+        "features": [
+          "Dedicated squad",
+          "CI/CD + observability",
+          "Security review pass",
+          "SLA-backed support"
+        ]
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "price": "Custom",
+        "blurb": "For regulated environments and mission-critical rollouts.",
+        "cta": "Talk to us",
+        "features": [
+          "Solution architecture",
+          "On-site / hybrid option",
+          "Compliance mapping",
+          "24/7 escalation path"
+        ]
+      }
+    }
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Answers with the lights on",
+    "items": {
+      "timelines": {
+        "q": "How do project timelines work?",
+        "a": "We work in focused phases with weekly demos. Most MVPs land in 8–12 weeks; enterprise programs are mapped to your procurement and compliance cadence."
+      },
+      "pricing": {
+        "q": "How is pricing structured?",
+        "a": "Engagements can be fixed-scope, monthly retainers, or hybrid. We align incentives to outcomes—not seat time—and document assumptions up front."
+      },
+      "technologies": {
+        "q": "Which technologies do you standardize on?",
+        "a": "We bias toward TypeScript, Next.js, and modern cloud-native stacks, but we meet you where your data and teams already live."
+      },
+      "support": {
+        "q": "What does support look like after launch?",
+        "a": "We offer proactive monitoring, on-call rotations, and roadmap grooming so your product keeps improving without heroics."
+      },
+      "maintenance": {
+        "q": "Do you handle maintenance and iteration?",
+        "a": "Yes—most clients keep a fractional squad for performance budgets, dependency health, and continuous UX refinement."
+      },
+      "ai": {
+        "q": "How do AI integrations work in production?",
+        "a": "We design for evals, guardrails, observability, and cost controls from day one—so models are reliable, measurable, and reversible."
+      }
+    }
+  },
+  "forms": {
+    "application": {
+      "eyebrow": "Client application",
+      "title": "Tell us what you're building",
+      "lead": "Secure intake—encrypted in transit. Configure Telegram, email, and database in production.",
+      "fullName": "Full name",
+      "companyName": "Company name",
+      "telegram": "Telegram username",
+      "email": "Email",
+      "serviceType": "Service type",
+      "budget": "Budget",
+      "deadline": "Target deadline",
+      "description": "Project description",
+      "attachment": "Attachments (optional)",
+      "dropzone": "Drop files or click to upload",
+      "dropzoneHint": "PDF, PNG, ZIP up to 15MB",
+      "submit": "Submit application",
+      "selectService": "Select a service",
+      "selectBudget": "Select range",
+      "success": "Received. Our team will reach out within one business day.",
+      "errorGeneric": "Could not submit. Check configuration or try again shortly."
+    },
+    "placeholders": {
+      "fullName": "Jordan Lee",
+      "company": "Northwind Labs",
+      "telegram": "@avilab",
+      "email": "you@company.com",
+      "description": "Goals, users, integrations, success metrics…"
+    },
+    "budgetLabels": {
+      "tier1": "$5k – $15k",
+      "tier2": "$15k – $40k",
+      "tier3": "$40k – $100k",
+      "tier4": "$100k+",
+      "tierUnsure": "Not sure yet"
+    },
+    "validation": {
+      "fullName": "Name is required",
+      "companyName": "Company is required",
+      "telegramUsername": "Telegram username is required",
+      "email": "Valid email required",
+      "serviceType": "Select a service",
+      "budget": "Select a budget range",
+      "deadline": "Deadline is required",
+      "projectDescription": "Describe your project (10+ characters)"
+    }
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Let's architect your next chapter",
+    "lead": "Prefer Telegram for fast threads—we monitor it like a bat signal.",
+    "hqTitle": "AviLab HQ",
+    "hqLine": "1 Infinite Loop, Cupertino, CA (placeholder)",
+    "telegramTitle": "Telegram",
+    "emailTitle": "Email",
+    "phoneTitle": "Phone",
+    "mapTitle": "AviLab on Google Maps",
+    "pageTitle": "Let's talk",
+    "pageLead": "HQ, Telegram, email, and phone—pick what fits your workflow.",
+    "socialTwitter": "Twitter / X",
+    "socialLinkedin": "LinkedIn",
+    "socialGithub": "GitHub"
+  },
+  "footer": {
+    "tagline": "Elite AI engineering, product design, and cloud platforms for teams that cannot afford average.",
+    "newsletterPlaceholder": "Newsletter email",
+    "navLabel": "Navigate",
+    "servicesLabel": "Services",
+    "socialLabel": "Social",
+    "startProject": "Start a project",
+    "twitterLabel": "Twitter / X",
+    "linkedinLabel": "LinkedIn",
+    "githubLabel": "GitHub",
+    "dribbbleLabel": "Dribbble"
+  },
+  "subnav": {
+    "backHome": "Back to home"
+  }
+}
