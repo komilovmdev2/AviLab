@@ -1,0 +1,428 @@
+{
+  "common": {
+    "brand": "AviLab",
+    "ctaStart": "Loyiha boshlash",
+    "ctaExplore": "Kashf etish",
+    "livePreview": "Jonli ko‘rinish",
+    "caseStudy": "Keys study",
+    "healthy": "Barqaror",
+    "submitting": "Yuborilmoqda…",
+    "subscribe": "Obuna",
+    "thanksNewsletter": "Rahmat—pochtangizni tekshiring.",
+    "privacy": "Maxfiylik",
+    "terms": "Shartlar",
+    "copyright": "Barcha huquqlar himoyalangan."
+  },
+  "meta": {
+    "home": {
+      "title": "AviLab — AI va texnologiya bilan kelajakni qurish",
+      "description": "AviLab zamonaviy bizneslar uchun jahon darajasidagi AI tizimlari, veb-saytlar, mobil ilovalar, korporativ platformalar va raqamli tajribalar yaratadi.",
+      "keywords": "AviLab, AI ishlab chiqish, Next.js agentligi, korporativ dastur, UI UX, bulut, SaaS",
+      "ogTitle": "AviLab — ilg‘or AI va texnologiya studiyasi",
+      "ogDescription": "Silicon Valley sifatidagi muhandislik va dizayn—tezlik va ishonchlilikni talab qiladigan jamoalar uchun.",
+      "twitterTitle": "AviLab",
+      "twitterDescription": "AI va texnologiya bilan kelajakni qurish."
+    },
+    "services": {
+      "title": "Xizmatlar",
+      "description": "Juda hamshiya jamoalar uchun to‘liq spektrli AI, mahsulot va bulut imkoniyatlari."
+    },
+    "portfolio": {
+      "title": "Portfolio",
+      "description": "Kinematik sifatda bajarilgan tanlangan loyihalar, platformalar va AI tizimlari."
+    },
+    "contact": {
+      "title": "Aloqa",
+      "description": "Hamkorlik, brifing va korporativ loyihalar uchun AviLab bilan bog‘laning."
+    }
+  },
+  "nav": {
+    "home": "Bosh sahifa",
+    "services": "Xizmatlar",
+    "portfolio": "Portfolio",
+    "team": "Jamoa",
+    "achievements": "Yutuqlar",
+    "contact": "Aloqa",
+    "startProject": "Loyiha boshlash",
+    "openMenu": "Menyuni ochish/yopish",
+    "language": "Til"
+  },
+  "pageLoader": {
+    "initializing": "Laboratoriya ishga tushmoqda"
+  },
+  "chatbot": {
+    "title": "AviLab yordamchisi",
+    "subtitle": "Demo konsyerj • jonli AI emas",
+    "close": "Chatni yopish",
+    "placeholder": "AviLab haqida so‘rang…",
+    "send": "Xabar yuborish",
+    "open": "AviLab yordamchisini ochish",
+    "welcome": "Salom—men AviLab konsyerjiman. Xizmatlar, muddatlar yoki AI bilan ishlash tartibimiz haqida so‘rang.",
+    "reply1": "Biz ishlab chiqarish darajasidagi AI, veb va mobil tizimlarni Silicon Valley darajasida joziba bilan quramiz. Muddat va texnologiya afzalliklaringizni ayting.",
+    "reply2": "Korporativ loyihalarda odatda texnik arxitektor va dizayn yetakchisini juftlashamiz. Shu hafta skoping qo‘ng‘irog‘ini xohlaysizmi?",
+    "reply3": "Mijoz ariza bo‘limiga brif yuklang—har bir arizani 24 soat ichida ko‘rib chiqamiz."
+  },
+  "hero": {
+    "badge": "Ilg‘or AI muhandislik studiyasi",
+    "headlineBefore": "AviLab —",
+    "headlineHighlight": "kelajakni",
+    "headlineAfter": "AI va texnologiya bilan quradi",
+    "subtitle": "Biz zamonaviy bizneslar uchun jahon darajasidagi AI tizimlari, veb-saytlar, mobil ilovalar, korporativ platformalar va raqamli tajribalar yaratamiz.",
+    "ctaPrimary": "Loyihangizni boshlang",
+    "ctaSecondary": "Portfolioni ko‘rish",
+    "statProjectsLabel": "Yetkazilgan loyihalar",
+    "statClientsLabel": "Global mijozlar",
+    "statYearsLabel": "Mahsulot mukammalligi",
+    "statProjects": "120+",
+    "statClients": "50+",
+    "statYears": "5+ yil",
+    "mockLiveStack": "Jonli stack",
+    "mockInference": "Inferens",
+    "mockVector": "Vektor MB",
+    "mockEdge": "Edge CDN",
+    "mockNeuralTitle": "Neyron trubasi",
+    "mockNeuralSubtitle": "Avtonom sifat tsikli",
+    "holoTitle": "Golografik UI",
+    "holoSubtitle": "Real vaqt kartalari",
+    "holoSignal": "Signal",
+    "orbitalTitle": "Orbital hisoblash",
+    "orbitalSubtitle": "Ko‘p mintaqali mesh"
+  },
+  "trusted": {
+    "eyebrow": "Katta miqyosda yetkazib beradigan jamoalar ishonchi"
+  },
+  "services": {
+    "eyebrow": "Imkoniyatlar",
+    "title": "Juda hamshiya mahsulotlar uchun to‘liq spektrli muhandislik",
+    "subtitle": "Neyron tizimlardan brend harakatigacha—har bir sirt o‘ylangan, o‘lchanadi va mukammallashtiriladi.",
+    "items": {
+      "aiDev": {
+        "title": "AI ishlab chiqish",
+        "description": "Maxsus modellar, RAG zanjirlari, agentlar va domeningizga mos ishlab chiqarish darajasidagi ML tizimlari."
+      },
+      "webDev": {
+        "title": "Veb ishlab chiqish",
+        "description": "Masshtab uchun qurilgan yuqori unumdor Next.js platformalari, dashboardlar va marketing saytlari."
+      },
+      "mobile": {
+        "title": "Mobil ilovalar",
+        "description": "Flutter va cross-platform tajribalar—jiddiy joziba va ishonchlilik bilan."
+      },
+      "uiux": {
+        "title": "UI/UX dizayn",
+        "description": "Mahsulot dizayn tizimlari, harakat va interfeyslar—aniq, xotirjam, premium."
+      },
+      "crmErp": {
+        "title": "CRM va ERP tizimlari",
+        "description": "Sotish, inventarizatsiya va jarayonlarni birlashtiruvchi operatsion dastur."
+      },
+      "telegramBots": {
+        "title": "Telegram botlar",
+        "description": "Telegram ichida avtomatlashtirish, onboarding, qo‘llab-quvvatlash va kommersiya oqimlari—tez va xavfsiz."
+      },
+      "saas": {
+        "title": "SaaS platformalar",
+        "description": "Jiddiy dasturiy bizneslar uchun multi-tenant arxitektura, billing, autentifikatsiya va analitika."
+      },
+      "cloud": {
+        "title": "Bulut infratuzilmasi",
+        "description": "AWS, konteynerlar, observability va tezlik hamda uptime uchun xarajatdan xabardor arxitektura."
+      },
+      "branding": {
+        "title": "Brending va motion",
+        "description": "Identifikatsiya, ishga tushirish filmlari va kategoriya yetakchiligini bildiruvchi mikrointeraksiyalar."
+      },
+      "security": {
+        "title": "Kiberxavfsizlik",
+        "description": "Mustahkamlash, tahlillar va xavfsiz SDLC—mahsulotingiz korporativ ishonchni qozonishi uchun."
+      }
+    },
+    "pageTitle": "Yetkazib beradigan xizmatlar",
+    "pageLead": "Strategiya, dizayn va muhandislik bitta tomonda—yo‘l xaritangiz asoschilar tezligida harakatlanadi, korporativ qat’iyatni yo‘qotmasdan."
+  },
+  "about": {
+    "eyebrow": "AviLab haqida",
+    "title": "Kategoriyalar belgilovchi mahsulotlar laboratoriyasi",
+    "missionLabel": "Missiya:",
+    "mission": "Intellektual tizimlar va mukammal ko‘rinadigan interfeyslarni yetkazish—eng talabchan foydalanuvchilar uchun tez, xavfsiz va chiroyli.",
+    "visionLabel": "Vizyon:",
+    "vision": "Dasturni raqobat xendiqi sifatida ko‘radigan jamoalar uchun standart hamkor bo‘lish.",
+    "values": {
+      "v1": "Tezlik va tam",
+      "v2": "Xavfsizlik standart bo‘yicha",
+      "v3": "Radikal aniqlik"
+    },
+    "stats": {
+      "projects": "Loyihalar",
+      "clients": "Mijozlar",
+      "years": "Yillik tajriba",
+      "countries": "Mamlakatlar"
+    },
+    "footnote": "Xalqaro jamoa • avval async • kerak bo‘lganda oflayn"
+  },
+  "technologies": {
+    "eyebrow": "Stack",
+    "title": "Ishlab chiqarishda ishlatadigan texnologiyalar"
+  },
+  "portfolio": {
+    "eyebrow": "Portfolio",
+    "title": "Kinematik puxta keyslar",
+    "filterAll": "Hammasi",
+    "categories": {
+      "ai": "AI",
+      "web": "Veb",
+      "mobile": "Mobil",
+      "design": "Dizayn",
+      "enterprise": "Korporativ"
+    },
+    "items": {
+      "nexusAi": { "title": "Nexus AI Copilot" },
+      "pulseAnalytics": { "title": "Pulse Analytics Cloud" },
+      "orbitMobile": { "title": "Orbit mobil bank" },
+      "lumenDesign": { "title": "Lumen dizayn tizimi" },
+      "vertexErp": { "title": "Vertex ERP paketi" },
+      "helixVision": { "title": "Helix Vision Lab" }
+    },
+    "pageTitle": "Standartni ko‘taradigan ishlar",
+    "pageLead": "Kinematik puxtalik bilan yetkazilgan AI, veb, mobil va korporativ dasturlar tanlovi."
+  },
+  "process": {
+    "eyebrow": "Jarayon",
+    "title": "G‘oyadan orbitagacha sinematik yo‘l",
+    "steps": {
+      "discovery": {
+        "title": "Kashfiyot",
+        "detail": "Maqsadlar, cheklovlar va muvaffaqiyat signalari—aniqlik bilan hujjatlashtiriladi."
+      },
+      "planning": {
+        "title": "Rejalashtirish",
+        "detail": "Arxitektura, bosqichlar va xavf xaritalari—startap mablag‘ingiz bilan uyg‘un."
+      },
+      "design": {
+        "title": "Dizayn",
+        "detail": "Mahsulot UX, tizimlar va harakat—qo‘lda mukammal his qilinadigan daraja."
+      },
+      "development": {
+        "title": "Ishlab chiqish",
+        "detail": "Tipizatsiya, test va CI bilan kuzatiladigan kod yo‘llari—birinchi kundan."
+      },
+      "testing": {
+        "title": "Testlash",
+        "detail": "Ishlab chiqarish yuk profillari ostida unumdorlik, xavfsizlik va realistik tekshiruv."
+      },
+      "deployment": {
+        "title": "Joylashtirish",
+        "detail": "Progressiv chiqarish, monitoring va jamoangiz egalik qiladigan qo‘llanmalar."
+      }
+    }
+  },
+  "team": {
+    "eyebrow": "Jamoa",
+    "title": "Arxitektorlar, dizaynerlar va operatorlar bitta ekipajda",
+    "members": {
+      "alex": { "role": "Asoschilar va CTO" },
+      "maya": { "role": "Yetakchi mahsulot dizayneri" },
+      "daniel": { "role": "Bosh muhandis" },
+      "sofia": { "role": "AI tadqiqot rahbari" }
+    },
+    "socialLinkedIn": "LinkedIn",
+    "socialGitHub": "GitHub",
+    "socialTwitter": "Twitter"
+  },
+  "achievements": {
+    "eyebrow": "Yutuqlar",
+    "title": "O‘rtacha ishlashga yo‘l qo‘ymaydigan maydonlardan dalillar",
+    "items": {
+      "aiSummit": {
+        "title": "Global AI Summit — eng yaxshi amaliy tadqiqot",
+        "detail": "Korporativ masshtabda ishlab chiqarish RAG arxitekturasi uchun tan olindi."
+      },
+      "awsPartner": {
+        "title": "AWS Advanced Tier hamkori",
+        "detail": "Sertifikatlangan bulut yetkazish va well-architected amaliyotlar."
+      },
+      "hackathon": {
+        "title": "Xalqaro hakaton — bosh sovrin",
+        "detail": "120 jamoa orasida real vaqt intellekt platformasi uchun birinchi o‘rin."
+      },
+      "iso27001": {
+        "title": "ISO 27001 ga muvofiqlik",
+        "detail": "Korporativ xarid talablariga moslashtirilgan xavfsizlik dasturi."
+      },
+      "fortune500": {
+        "title": "Fortune 500 ishga tushirish hamkori",
+        "detail": "Global chakana savdo uchun missiyaga muhim ichki vositalar yetkazildi."
+      }
+    }
+  },
+  "testimonials": {
+    "eyebrow": "Sharhlar",
+    "title": "Bosim ostida yetkazib beradigan yetakchilarning ishonchi",
+    "goToSlide": "{n}-sharohni ko‘rsatish",
+    "items": {
+      "jordan": {
+        "quote": "AviLab ichki mahsulot jamoasi kabi ishlaydi—tezlik, tam va muhandislik chuqurligi kam uchraydi.",
+        "role": "Muhandislik bo‘yicha vitse-prezident, Northwind"
+      },
+      "elena": {
+        "quote": "Noaniq AI g‘oyasini rahbariyatimiz har kuni ishlatadigan jozibali platformaga aylantirdilar.",
+        "role": "Mahsulot bo‘yicha bosh direktor, Lumen"
+      },
+      "marcus": {
+        "quote": "Harakat, tipografiya va unumdorlikka e’tibor Silicon Valley darajasida. Konversiya buni isbotladi.",
+        "role": "Bosh direktor, Atlas Commerce"
+      }
+    }
+  },
+  "pricing": {
+    "eyebrow": "Narxlar (oldindan)",
+    "title": "Hamkorlikka o‘xshash shakllantirilgan jalb qilish—hisob-faktura emas",
+    "popular": "Eng mashhur",
+    "plans": {
+      "startup": {
+        "name": "Startap",
+        "price": "$12k dan",
+        "blurb": "Dizayn + muhandislik bilan jasoratli MVP ni tasdiqlayotgan asoschilar uchun.",
+        "cta": "Kashfiyot chaqirig‘i",
+        "features": [
+          "Mahsulot strategiyasi workshop",
+          "Dizayn tizimi starter",
+          "Next.js / mobil qism",
+          "2 haftalik iteratsiya ritmi"
+        ]
+      },
+      "business": {
+        "name": "Biznes",
+        "price": "$48k dan",
+        "blurb": "Ishonchli platformalar va AI funksiyalari bilan daromadni kengaytirayotgan jamoalar uchun.",
+        "cta": "Skoping boshlash",
+        "features": [
+          "Ajratilgan otryad",
+          "CI/CD + observability",
+          "Xavfsizlik ko‘rib chiqish",
+          "SLA bilan qo‘llab-quvvatlash"
+        ]
+      },
+      "enterprise": {
+        "name": "Korporativ",
+        "price": "Individual",
+        "blurb": "Regulyativ muhit va missiyaga muhim ishga tushirishlar uchun.",
+        "cta": "Biz bilan bog‘laning",
+        "features": [
+          "Yechim arxitekturasi",
+          "Ofis / gibrid opsiya",
+          "Muvofiqlik xaritalash",
+          "24/7 eskalatsiya liniyasi"
+        ]
+      }
+    }
+  },
+  "faq": {
+    "eyebrow": "Savol-javob",
+    "title": "Yorug‘lik yoqilgan javoblar",
+    "items": {
+      "timelines": {
+        "q": "Loyiha muddatlari qanday ishlaydi?",
+        "a": "Haftalik demo bilan fokuslangan bosqichlarda ishlaymiz. Ko‘pchilik MVP lar 8–12 haftada; korporativ dasturlar xarid va muvofiqlik ritmingizga moslanadi."
+      },
+      "pricing": {
+        "q": "Narxlar qanday tuziladi?",
+        "a": "Belgilangan hajm, oylik retainer yoki gibrid. Natijaga yo‘naltirilgan ragbat—o‘tirgan soat emas—va taxminlar oldindan yoziladi."
+      },
+      "technologies": {
+        "q": "Qaysi texnologiyalarni standart qilasiz?",
+        "a": "TypeScript, Next.js va zamonaviy cloud-native stack ga moyilamiz, lekin ma’lumotlaringiz va jamoangiz qayerda bo‘lsa, u yerga moslashamiz."
+      },
+      "support": {
+        "q": "Ishga tushirgach qo‘llab-quvvatlash qanday?",
+        "a": "Proaktiv monitoring, navbatchilik va roadmap yuritish—qahramonliksiz mahsulot rivojlanishini davom ettiramiz."
+      },
+      "maintenance": {
+        "q": "Texnik xizmat va iteratsiyalarni boshqarasizmi?",
+        "a": "Ha—aksariyat mijozlar unumdorlik byudjeti, paket salomatligi va uzluksiz UX takomillash uchun fraksional otryadni saqlab qoladi."
+      },
+      "ai": {
+        "q": "AI integratsiyalari ishlab chiqarishda qanday ishlaydi?",
+        "a": "Baholash, guardrail, observability va xarajat nazoratini birinchi kundan rejalaymiz—modellar ishonchli, o‘lchanadi va qaytarilishi mumkin."
+      }
+    }
+  },
+  "forms": {
+    "application": {
+      "eyebrow": "Mijoz arizasi",
+      "title": "Nima qurayotganingizni ayting",
+      "lead": "Xavfsiz qabul—transitda shifrlangan. Ishlab chiqarishda Telegram, email va bazani sozlang.",
+      "fullName": "To‘liq ism",
+      "companyName": "Kompaniya nomi",
+      "telegram": "Telegram foydalanuvchi nomi",
+      "email": "Email",
+      "serviceType": "Xizmat turi",
+      "budget": "Byudjet",
+      "deadline": "Maqsadli muddat",
+      "description": "Loyiha tavsifi",
+      "attachment": "Ilovalar (ixtiyoriy)",
+      "dropzone": "Faylni tashlang yoki yuklash uchun bosing",
+      "dropzoneHint": "PDF, PNG, ZIP 15 MB gacha",
+      "submit": "Arizani yuborish",
+      "selectService": "Xizmatni tanlang",
+      "selectBudget": "Oraliqni tanlang",
+      "success": "Qabul qilindi. Jamoamiz bir ish kuni ichida aloqaga chiqadi.",
+      "errorGeneric": "Yuborib bo‘lmadi. Sozlamalarni tekshiring yoki birozdan keyin qayta urinib ko‘ring."
+    },
+    "placeholders": {
+      "fullName": "Jordan Lee",
+      "company": "Northwind Labs",
+      "telegram": "@avilab",
+      "email": "you@company.com",
+      "description": "Maqsadlar, foydalanuvchilar, integratsiyalar, muvaffaqiyat metrikalari…"
+    },
+    "budgetLabels": {
+      "tier1": "$5k – $15k",
+      "tier2": "$15k – $40k",
+      "tier3": "$40k – $100k",
+      "tier4": "$100k+",
+      "tierUnsure": "Hali aniq emas"
+    },
+    "validation": {
+      "fullName": "Ism majburiy",
+      "companyName": "Kompaniya majburiy",
+      "telegramUsername": "Telegram foydalanuvchi nomi majburiy",
+      "email": "To‘g‘ri email kiriting",
+      "serviceType": "Xizmatni tanlang",
+      "budget": "Byudjet oralig‘ini tanlang",
+      "deadline": "Muddat majburiy",
+      "projectDescription": "Loyihani tasvirlang (10+ belgi)"
+    }
+  },
+  "contact": {
+    "eyebrow": "Aloqa",
+    "title": "Keyingi bosqichingizni arxitekturalaymiz",
+    "lead": "Tez yozishmalarni Telegram afzal ko‘ring—uni signal kabi kuzatamiz.",
+    "hqTitle": "AviLab bosh ofisi",
+    "hqLine": "1 Infinite Loop, Cupertino, CA (namuna)",
+    "telegramTitle": "Telegram",
+    "emailTitle": "Email",
+    "phoneTitle": "Telefon",
+    "mapTitle": "Google xaritada AviLab",
+    "pageTitle": "Gaplashaylik",
+    "pageLead": "Bosh ofis, Telegram, email va telefon—o‘zingizga mos kanalni tanlang.",
+    "socialTwitter": "Twitter / X",
+    "socialLinkedin": "LinkedIn",
+    "socialGithub": "GitHub"
+  },
+  "footer": {
+    "tagline": "O‘rtacha natijaga rozi bo‘lmasa ham bo‘ladigan jamoalar uchun ilg‘or AI muhandisligi, mahsulot dizayni va bulut platformalari.",
+    "newsletterPlaceholder": "Newsletter email",
+    "navLabel": "Navigatsiya",
+    "servicesLabel": "Xizmatlar",
+    "socialLabel": "Ijtimoiy tarmoqlar",
+    "startProject": "Loyiha boshlash",
+    "twitterLabel": "Twitter / X",
+    "linkedinLabel": "LinkedIn",
+    "githubLabel": "GitHub",
+    "dribbbleLabel": "Dribbble"
+  },
+  "subnav": {
+    "backHome": "Bosh sahifaga"
+  }
+}
