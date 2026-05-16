@@ -2,10 +2,10 @@
 
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion"
 import Image from "next/image"
-import { AtSign, Code2, Share2 } from "lucide-react"
+import { AtSign, Code2, Share2, Users, Award, Target } from "lucide-react"
 import { useTranslations } from "next-intl"
 import { Link } from "@/i18n/navigation"
-import { teamMembers } from "@/lib/site-config"
+import { teamMembers, teamGroupImages } from "@/lib/site-config"
 
 export function Team() {
   const t = useTranslations("team")
@@ -30,12 +30,90 @@ export function Team() {
           >
             {t("title")}
           </motion.h2>
+          <motion.p
+            className="mt-4 text-slate-400"
+            initial={{ opacity: 0, y: 14 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+          >
+            {t("description")}
+          </motion.p>
         </div>
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+
+        {/* Team Stats */}
+        <motion.div
+          className="mt-12 grid grid-cols-2 gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-6 md:grid-cols-4"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2 }}
+        >
+          <div className="text-center">
+            <Users className="mx-auto mb-2 size-8 text-avilab-glow" />
+            <p className="font-heading text-2xl font-semibold text-white">{teamMembers.length}+</p>
+            <p className="text-sm text-slate-400">Team Members</p>
+          </div>
+          <div className="text-center">
+            <Award className="mx-auto mb-2 size-8 text-avilab-glow" />
+            <p className="font-heading text-2xl font-semibold text-white">50+</p>
+            <p className="text-sm text-slate-400">Projects Delivered</p>
+          </div>
+          <div className="text-center">
+            <Target className="mx-auto mb-2 size-8 text-avilab-glow" />
+            <p className="font-heading text-2xl font-semibold text-white">5+</p>
+            <p className="text-sm text-slate-400">Years Experience</p>
+          </div>
+          <div className="text-center">
+            <Users className="mx-auto mb-2 size-8 text-avilab-glow" />
+            <p className="font-heading text-2xl font-semibold text-white">100%</p>
+            <p className="text-sm text-slate-400">Client Satisfaction</p>
+          </div>
+        </motion.div>
+
+        {/* Team Members Grid */}
+        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {teamMembers.map((member, i) => (
             <TeamCard key={member.id} member={member} index={i} />
           ))}
         </div>
+
+        {/* Team Group Photos */}
+        <motion.div
+          className="mt-20"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3 }}
+        >
+          <h3 className="mb-8 font-heading text-2xl font-semibold text-white text-center">
+            Team Moments
+          </h3>
+          <div className="grid gap-6 md:grid-cols-3">
+            {teamGroupImages.map((groupImg, i) => (
+              <motion.div
+                key={groupImg.id}
+                className="relative overflow-hidden rounded-2xl border border-white/10"
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.4 + i * 0.1 }}
+              >
+                <Image
+                  src={groupImg.image}
+                  alt={groupImg.caption}
+                  width={1200}
+                  height={800}
+                  className="aspect-[4/3] w-full object-cover transition duration-500 hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                <p className="absolute bottom-4 left-4 right-4 text-sm text-white">
+                  {groupImg.caption}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   )
@@ -84,7 +162,13 @@ function TeamCard({
       </div>
       <div className="relative mt-4">
         <h3 className="font-heading text-lg font-semibold text-white">{member.name}</h3>
-        <p className="text-sm text-avilab-glow">{t(`members.${member.id}.role`)}</p>
+        <p className="text-sm text-avilab-glow">{member.role}</p>
+        <p className="mt-2 text-xs text-slate-400 line-clamp-2">{member.bio}</p>
+        <div className="mt-3 flex items-center gap-2 text-xs text-slate-500">
+          <span className="font-medium text-avilab-glow">{member.experience}</span>
+          <span>•</span>
+          <span>Experience</span>
+        </div>
         <div className="mt-3 flex flex-wrap gap-1.5">
           {member.stack.map((s) => (
             <span
