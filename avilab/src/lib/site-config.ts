@@ -117,17 +117,17 @@ export const teamGroupImages = [
   {
     id: "team1",
     image: "/team1.jpg",
-    caption: "Our team collaborating on innovative projects"
+    caption: "Ai national hackaton winners 2025 with our CEO Abdurasulov Abdulla in the middle"
   },
   {
     id: "team2",
     image: "/team2.jpg",
-    caption: "Brainstorming session with the team"
+    caption: "Central Asian Unversity Ai hackathon winners 2026 with our CEO Abdurasulov Abdulla on the right"
   },
   {
     id: "team3",
     image: "/team3.jpg",
-    caption: "Team celebration after successful project launch"
+    caption: "Global startup award ceremony 2024 with our CEO Abdurasulov Abdulla on the left"
   },
   {
     id: "team4",
