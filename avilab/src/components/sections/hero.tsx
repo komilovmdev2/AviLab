@@ -52,7 +52,21 @@ export function Hero() {
         className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgb(148_163_184/0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgb(148_163_184/0.08)_1px,transparent_1px)] bg-[length:64px_64px] mask-[radial-gradient(ellipse_at_center,black,transparent_72%)]"
         aria-hidden
       />
-      <div className="pointer-events-none absolute -top-32 left-1/2 h-[520px] w-[min(90vw,880px)] -translate-x-1/2 rounded-full bg-gradient-to-r from-avilab-accent/25 via-avilab-violet/20 to-avilab-glow/25 blur-3xl" />
+      <div className="pointer-events-none absolute -top-32 left-1/2 h-[720px] w-[min(90vw,880px)] -translate-x-1/2 rounded-full bg-gradient-to-r from-avilab-accent/25 via-avilab-violet/20 to-avilab-glow/25 blur-3xl" />
+      <motion.img
+        src="/planet-header.png"
+        alt="Planet Background"
+        className="pointer-events-none absolute right-[-100px] top-1/2 -translate-y-1/2 w-[70%] max-w-5xl object-contain opacity-35"
+        animate={{ 
+          y: ["-3%", "-3%", "-3%"],
+          rotate: [0, 1.5, 0]
+        }}
+        transition={{ 
+          duration: 12,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
+      />
       {particles.map((p) => (
         <motion.span
           key={p.id}

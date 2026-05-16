@@ -63,7 +63,7 @@ export const portfolioItems = [
 export const teamMembers = [
   {
     id: "alex",
-    name: "Alex Rivera",
+    name: "Mukhammad Komilov",
     stack: ["AI", "Systems", "Next.js"],
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
     social: { linkedin: "#", github: "#", twitter: "#" },
