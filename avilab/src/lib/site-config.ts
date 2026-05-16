@@ -68,7 +68,7 @@ export const teamMembers = [
     bio: "Passionate about building intelligent systems that solve real-world problems. Leading AI initiatives with 5+ years of experience.",
     experience: "5+ years",
     stack: ["AI", "Systems", "Next.js"],
-    image: "/abdulla.JPG",
+    image: "/abdulla.jpg",
     social: { linkedin: "#", github: "#", twitter: "#" },
   },
   {
