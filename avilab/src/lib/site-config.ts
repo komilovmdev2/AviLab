@@ -1,5 +1,7 @@
 /** Structural / media config only — all user-facing copy lives in `messages/{locale}.json`. */
 
+import { id } from "zod/v4/locales"
+
 export const serviceItems = [
   { id: "aiDev", icon: "Brain" },
   { id: "webDev", icon: "Globe" },
@@ -64,10 +66,10 @@ export const teamMembers = [
   {
     id: "alex",
     name: "Abdurasulov Abdulla",
-    role: "Founder & CEO",
+    role: "Founder & Data Scientist",
     bio: "Visionary leader with a passion for AI innovation. Experienced in building scalable AI solutions and leading high-performing teams.",
     experience: "5+ years",
-    stack: ["AI", "Systems", "Leadership"],
+    stack: ["AI", "Systems", "Leadership", "Python", "MLOps"],
     image: "/abdulla.jpg",
     social: { linkedin: "#", github: "#", twitter: "#" },
   },
@@ -87,14 +89,14 @@ export const teamMembers = [
     role: "Backend developer",
     bio: "Building scalable and secure cloud infrastructure. Specialized in Kubernetes and enterprise security solutions.",
     experience: "4+ years",
-    stack: ["Python", "HTML", "Ract", "Next.js", "AWS", "Kubernetes"],
+    stack: ["Python", "Aiogram", "React", "Next.js", "AWS", "Kubernetes"],
     image: "/shox.jpg",
     social: { linkedin: "#", github: "#", twitter: "#" },
   },
   {
     id: "sofia",
     name: "Azizbek Atoyev",
-    role: "CTO",
+    role: "Data Scientist & MLOps Engineer",
     bio: "Technical visionary with expertise in AI architecture and MLOps. Leading the development of cutting-edge AI solutions that drive business value.",
     experience: "6+ years",
     stack: ["LLMs", "Python", "MLOps", "AI"],
@@ -110,6 +112,16 @@ export const teamMembers = [
     stack: ["React", "TypeScript", "Node.js", "Figma", "Framer", "Motion"],
     image: "/mukhammad.JPG",
     social: { linkedin: "#", github: "#", twitter: "#" },
+  },
+  {
+    id: "emma",
+    name: "Alibek Jumanyazov",
+    role: "Frontend Developer",
+    bio: "Exploring the frontiers of AI research to develop innovative solutions. Specialized in natural language processing and deep learning.",
+    experience: "4+ years",
+    stack: ["React", "Next.js", "TypeScript", "Python", "TensorFlow"],
+    image: "/alibek2.jpg",
+    social: { linkedin: "#", github: "#", twitter: "#" },
   }
 ] as const
 
@@ -117,22 +129,22 @@ export const teamGroupImages = [
   {
     id: "team1",
     image: "/team1.jpg",
-    caption: "Ai national hackaton winners 2025 with our CEO Abdurasulov Abdulla in the middle"
+    caption: "Ai national hackaton 2026. Samarqand Uzbekistan"
   },
   {
     id: "team2",
     image: "/team2.jpg",
-    caption: "Central Asian Unversity Ai hackathon winners 2026 with our CEO Abdurasulov Abdulla on the right"
+    caption: "Central Asian Unversity Ai hackathon 2026. Tashkent Uzbekistan"
   },
   {
     id: "team3",
     image: "/team3.jpg",
-    caption: "Global startup award ceremony 2024 with our CEO Abdurasulov Abdulla on the left"
+    caption: "Global startup award 2025. Tashkent Uzbekistan"
   },
   {
     id: "team4",
     image: "/team4.jpg",
-    caption: "Team building activity at the park"
+    caption: "Innoweek 2024. Tashkent Uzbekistan"
   }
 ] as const
 
