@@ -170,8 +170,10 @@ export function Portfolio({ compact }: { compact?: boolean }) {
                         ))}
                       </div>
                       <div className="flex flex-wrap gap-2 pt-1">
-                        <Link
-                          href="/"
+                        <a
+                          href={project.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className={cn(
                             buttonVariants(),
                             "h-9 rounded-xl border-0 bg-white text-black hover:bg-white/90"
@@ -179,7 +181,7 @@ export function Portfolio({ compact }: { compact?: boolean }) {
                         >
                           <ExternalLink className="mr-1.5 size-3.5" />
                           {tc("livePreview")}
-                        </Link>
+                        </a>
                         <Link
                           href="/"
                           className={cn(

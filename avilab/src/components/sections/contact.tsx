@@ -49,7 +49,7 @@ export function Contact({ compact }: { compact?: boolean }) {
             ) : null}
             <div className={cn("space-y-4", !compact ? "mt-8" : "mt-0")}>
               <motion.a
-                href="https://maps.google.com/?q=1+Infinite+Loop+Cupertino"
+                href="https://maps.app.goo.gl/3D1Vdsvu9zYas2ZK7"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="glass-panel flex gap-4 rounded-2xl p-4 transition-all hover:border-avilab-glow/30 hover:shadow-[0_0_32px_-12px_rgb(56_189_248/0.35)]"
@@ -91,8 +91,8 @@ export function Contact({ compact }: { compact?: boolean }) {
                 <Mail className="mt-0.5 size-5 shrink-0 text-avilab-glow" aria-hidden />
                 <div>
                   <p className="text-sm font-medium text-white">{t("emailTitle")}</p>
-                  <a href="mailto:hello@avilab.io" className="text-sm text-avilab-glow hover:underline">
-                    hello@avilab.io
+                  <a href="mailto:abdula_9146@icloud.com" className="text-sm text-avilab-glow hover:underline">
+                    abdula_9146@icloud.com
                   </a>
                 </div>
               </motion.div>
@@ -107,7 +107,7 @@ export function Contact({ compact }: { compact?: boolean }) {
                 <div>
                   <p className="text-sm font-medium text-white">{t("phoneTitle")}</p>
                   <a href="tel:+14085550199" className="text-sm text-avilab-glow hover:underline">
-                    +1 (408) 555-0199
+                    +998 95 850 08 80
                   </a>
                 </div>
               </motion.div>
@@ -135,8 +135,8 @@ export function Contact({ compact }: { compact?: boolean }) {
             <div className="aspect-[4/3] w-full md:aspect-auto md:h-full md:min-h-[420px]">
               <iframe
                 title={t("mapTitle")}
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3172.456!2d-122.0322!3d37.3318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb5b7c0b0b0b0%3A0x0!2sApple%20Park!5e0!3m2!1sen!2sus!4v1"
-                className="h-full min-h-[320px] w-full border-0 grayscale contrast-125 filter md:min-h-[420px]"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23884.0051646687!2d60.583774674316395!3d41.5584081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41dfc9842c81fc9d%3A0x9e434d2b8a616ce9!2sIT%20Park!5e0!3m2!1sru!2skg!4v1780779586352!5m2!1sru!2skg"
+                className="h-full min-h-[320px] w-full border-0 filter md:min-h-[420px]"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 allowFullScreen

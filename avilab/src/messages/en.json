@@ -210,12 +210,12 @@
       "enterprise": "Enterprise"
     },
     "items": {
-      "nexusAi": { "title": "Nexus AI" },
-      "pulseAnalytics": { "title": "Pulse Analytics" },
-      "orbitMobile": { "title": "Orbit Mobile" },
-      "lumenDesign": { "title": "Lumen Design" },
-      "vertexErp": { "title": "Vertex ERP" },
-      "helixVision": { "title": "Helix Vision" }
+      "nexusAi": { "title": "AviShifo" },
+      "pulseAnalytics": { "title": "AviRadiolog" },
+      "orbitMobile": { "title": "AviFitness" },
+      "lumenDesign": { "title": "CleanWay" },
+      "vertexErp": { "title": "ShifoGO" },
+      "helixVision": { "title": "Med Institute" }
     }
   },
   "contact": {

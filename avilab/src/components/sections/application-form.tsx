@@ -209,7 +209,7 @@ export function ApplicationForm() {
                 <p className="text-xs text-red-400">{fieldErrors.serviceType}</p>
               ) : null}
             </div>
-            <div className="space-y-2">
+            {/* <div className="space-y-2">
               <Label htmlFor="budget" className="text-slate-300">
                 {t("budget")}
               </Label>
@@ -235,7 +235,7 @@ export function ApplicationForm() {
               {fieldErrors.budget ? (
                 <p className="text-xs text-red-400">{fieldErrors.budget}</p>
               ) : null}
-            </div>
+            </div> */}
           </div>
           <div className="space-y-2">
             <Label htmlFor="deadline" className="text-slate-300">

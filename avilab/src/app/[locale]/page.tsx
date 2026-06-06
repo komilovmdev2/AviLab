@@ -73,7 +73,7 @@ export default function HomePage() {
         <Team />
         <Achievements />
         <Testimonials />
-        <Pricing />
+        {/* <Pricing /> */}
         <FAQ />
         <ApplicationForm />
         <Contact />

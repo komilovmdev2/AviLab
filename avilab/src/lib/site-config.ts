@@ -1,6 +1,11 @@
 /** Structural / media config only — all user-facing copy lives in `messages/{locale}.json`. */
 
-import { id } from "zod/v4/locales"
+import avishifo from "../../public/avishifo.png"
+import aviRadiolog from "../../public/aviradiolog.png"
+import avifitness from "../../public/avifitness.png"
+import cleanway from "../../public/cleanway.png"
+import shifogo from "../../public/shifogo.png"
+import medInstitute from "../../public/med.png"
 
 export const serviceItems = [
   { id: "aiDev", icon: "Brain" },
@@ -22,43 +27,43 @@ export const portfolioItems = [
     id: "nexusAi",
     category: "ai" satisfies PortfolioCategoryId,
     stack: ["OpenAI", "Next.js", "Python", "PostgreSQL"],
-    image:
-      "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=900&q=80",
+    image: avishifo,
+    url: "https://www.avishifo.uz/",
   },
   {
     id: "pulseAnalytics",
-    category: "web",
+    category: "ai",
     stack: ["React", "Node.js", "AWS", "Docker"],
-    image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&q=80",
+    image: aviRadiolog,
+    url: "https://www.aviradiology.uz",
   },
   {
     id: "orbitMobile",
     category: "mobile",
     stack: ["Flutter", "Kotlin", "PostgreSQL"],
-    image:
-      "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=900&q=80",
+    image: avifitness,
+    url: "https://www.avifitness.uz",
   },
   {
     id: "lumenDesign",
-    category: "design",
+    category: "web",
     stack: ["Figma", "Framer", "Motion"],
-    image:
-      "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=900&q=80",
+    image: cleanway,
+    url: "https://cleanway.4mi.uz/login",
   },
   {
     id: "vertexErp",
-    category: "enterprise",
+    category: "web",
     stack: ["Next.js", "Kubernetes", "PostgreSQL"],
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=80",
+    image: shifogo,
+    url: "https://shifogo.arkzone.uz",
   },
   {
     id: "helixVision",
-    category: "ai",
+    category: "web",
     stack: ["TensorFlow", "Python", "AWS"],
-    image:
-      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=900&q=80",
+    image: medInstitute,
+    url: "https://www.urdtiyoshlar.uz",
   },
 ] as const
 
