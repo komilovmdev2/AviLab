@@ -14,7 +14,7 @@ export const localeLabels: Record<
   AppLocale,
   { short: string; native: string; flag: string }
 > = {
-  en: { short: "EN", native: "English", flag: "🇬🇧" },
-  uz: { short: "UZ", native: "Oʻzbekcha", flag: "🇺🇿" },
-  ru: { short: "RU", native: "Русский", flag: "🇷🇺" },
+  en: { short: "EN", native: "English", flag: "/flags/united-kingdom.png" },
+  uz: { short: "UZ", native: "Oʻzbekcha", flag: "/flags/uzbekistan.png" },
+  ru: { short: "RU", native: "Русский", flag: "/flags/russia.png" },
 }

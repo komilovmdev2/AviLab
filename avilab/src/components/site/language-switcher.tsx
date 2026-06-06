@@ -1,12 +1,37 @@
 "use client"
 
 import { AnimatePresence, motion } from "framer-motion"
-import { ChevronDown, Globe } from "lucide-react"
+import { ChevronDown } from "lucide-react"
+import Image from "next/image"
 import { useLocale, useTranslations } from "next-intl"
 import { useEffect, useRef, useState } from "react"
 import { localeLabels, routing, type AppLocale } from "@/i18n/routing"
 import { usePathname, useRouter } from "@/i18n/navigation"
 import { cn } from "@/lib/utils"
+
+function LocaleFlag({
+  locale,
+  className,
+}: {
+  locale: AppLocale
+  className?: string
+}) {
+  const { flag } = localeLabels[locale]
+
+  return (
+    <Image
+      src={flag}
+      alt=""
+      width={20}
+      height={20}
+      className={cn(
+        "size-4 shrink-0 rounded-full object-cover ring-1 ring-white/15",
+        className
+      )}
+      aria-hidden
+    />
+  )
+}
 
 export function LanguageSwitcher({ className }: { className?: string }) {
   const t = useTranslations("nav")
@@ -56,8 +81,7 @@ export function LanguageSwitcher({ className }: { className?: string }) {
           open && "border-avilab-glow/40 bg-white/[0.09]"
         )}
       >
-        <Globe className="size-3.5 text-avilab-glow" aria-hidden />
-        <span className="tabular-nums">{current.flag}</span>
+        <LocaleFlag locale={locale} />
         <span>{current.short}</span>
         <ChevronDown
           className={cn("size-3.5 text-slate-400 transition-transform", open && "rotate-180")}
@@ -92,9 +116,7 @@ export function LanguageSwitcher({ className }: { className?: string }) {
                       : "text-slate-300 hover:bg-white/[0.06] hover:text-white"
                   )}
                 >
-                  <span className="text-base" aria-hidden>
-                    {L.flag}
-                  </span>
+                  <LocaleFlag locale={code as AppLocale} className="size-5" />
                   <span className="flex flex-1 flex-col gap-0.5">
                     <span className="font-medium">{L.native}</span>
                     <span className="text-[10px] tracking-wider text-slate-500 uppercase">
