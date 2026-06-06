@@ -9,6 +9,7 @@ import { Link } from "@/i18n/navigation"
 import { mainNav } from "@/lib/nav-config"
 import { cn } from "@/lib/utils"
 import { LanguageSwitcher } from "@/components/site/language-switcher"
+import { SiteLogo } from "@/components/site/site-logo"
 
 export function Navbar() {
   const t = useTranslations("nav")
@@ -36,10 +37,10 @@ export function Navbar() {
       <div className="flex h-14 items-center justify-between gap-2 md:h-16">
         <Link
           href="/"
-          className="font-heading text-lg font-semibold tracking-tight text-white"
+          className="flex shrink-0 items-center"
+          aria-label={tc("brand")}
         >
-          {tc("brand")}
-          <span className="ml-1 text-avilab-glow">.</span>
+          <SiteLogo alt={tc("brand")} priority />
         </Link>
         <nav className="hidden items-center gap-0.5 lg:flex" aria-label={t("home")}>
           {mainNav.map((item) => (

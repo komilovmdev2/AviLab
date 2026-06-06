@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Link } from "@/i18n/navigation"
 import { mainNav } from "@/lib/nav-config"
+import { SiteLogo } from "@/components/site/site-logo"
 import { serviceItems } from "@/lib/site-config"
 
 const socialLinks = [
@@ -43,15 +44,13 @@ export function Footer() {
       <div className="relative mx-auto max-w-6xl px-4 md:px-6">
         <div className="flex flex-col gap-12 lg:flex-row lg:items-start lg:justify-between">
           <div className="max-w-md">
-            <motion.p
-              className="font-heading text-4xl font-semibold tracking-tight text-white sm:text-5xl"
+            <motion.div
               initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              {tc("brand")}
-              <span className="text-avilab-glow">.</span>
-            </motion.p>
+              <SiteLogo alt={tc("brand")} className="h-12 sm:h-14" />
+            </motion.div>
             <p className="mt-4 text-slate-400">{t("tagline")}</p>
             <form onSubmit={onNewsletter} className="mt-6 flex flex-col gap-3 sm:flex-row">
               <Input
