@@ -6,6 +6,7 @@ import Image from "next/image"
 import { useLocale, useTranslations } from "next-intl"
 import { useEffect, useRef, useState } from "react"
 import { localeLabels, routing, type AppLocale } from "@/i18n/routing"
+import { localeFlags } from "@/lib/locale-flags"
 import { usePathname, useRouter } from "@/i18n/navigation"
 import { cn } from "@/lib/utils"
 
@@ -16,14 +17,16 @@ function LocaleFlag({
   locale: AppLocale
   className?: string
 }) {
-  const { flag } = localeLabels[locale]
+  const flag = localeFlags[locale]
 
   return (
     <Image
+      key={locale}
       src={flag}
       alt=""
-      width={20}
-      height={20}
+      width={flag.width}
+      height={flag.height}
+      unoptimized
       className={cn(
         "size-4 shrink-0 rounded-full object-cover ring-1 ring-white/15",
         className
