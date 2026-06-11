@@ -176,12 +176,12 @@
       "enterprise": "Enterprise"
     },
     "items": {
-      "nexusAi": { "title": "Nexus AI Copilot" },
-      "pulseAnalytics": { "title": "Pulse Analytics Cloud" },
-      "orbitMobile": { "title": "Orbit Mobile Banking" },
-      "lumenDesign": { "title": "Lumen Design System" },
-      "vertexErp": { "title": "Vertex ERP Suite" },
-      "helixVision": { "title": "Helix Vision Lab" }
+      "nexusAi": { "title": "AviShifo" },
+      "pulseAnalytics": { "title": "AviRadiology" },
+      "orbitMobile": { "title": "AviFitness" },
+      "lumenDesign": { "title": "CleanWay" },
+      "vertexErp": { "title": "ShifoGO" },
+      "helixVision": { "title": "Med Institute" }
     },
     "pageTitle": "Work that raises the bar",
     "pageLead": "A curated set of AI, web, mobile, and enterprise programs delivered with obsessive craft."

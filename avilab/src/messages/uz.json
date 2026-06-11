@@ -176,12 +176,12 @@
       "enterprise": "Korporativ"
     },
     "items": {
-      "nexusAi": { "title": "Nexus AI Copilot" },
-      "pulseAnalytics": { "title": "Pulse Analytics Cloud" },
-      "orbitMobile": { "title": "Orbit mobil bank" },
-      "lumenDesign": { "title": "Lumen dizayn tizimi" },
-      "vertexErp": { "title": "Vertex ERP paketi" },
-      "helixVision": { "title": "Helix Vision Lab" }
+      "nexusAi": { "title": "AviShifo" },
+      "pulseAnalytics": { "title": "AviRadiology" },
+      "orbitMobile": { "title": "AviFitness" },
+      "lumenDesign": { "title": "CleanWay" },
+      "vertexErp": { "title": "ShifoGO" },
+      "helixVision": { "title": "Med instituti" }
     },
     "pageTitle": "Standartni ko‘taradigan ishlar",
     "pageLead": "Kinematik puxtalik bilan yetkazilgan AI, veb, mobil va korporativ dasturlar tanlovi."

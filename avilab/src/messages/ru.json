@@ -176,12 +176,12 @@
       "enterprise": "Enterprise"
     },
     "items": {
-      "nexusAi": { "title": "Nexus AI Copilot" },
-      "pulseAnalytics": { "title": "Pulse Analytics Cloud" },
-      "orbitMobile": { "title": "Orbit Mobile Banking" },
-      "lumenDesign": { "title": "Lumen Design System" },
-      "vertexErp": { "title": "Vertex ERP Suite" },
-      "helixVision": { "title": "Helix Vision Lab" }
+      "nexusAi": { "title": "AviShifo" },
+      "pulseAnalytics": { "title": "AviRadiology" },
+      "orbitMobile": { "title": "AviFitness" },
+      "lumenDesign": { "title": "CleanWay" },
+      "vertexErp": { "title": "ShifoGO" },
+      "helixVision": { "title": "Медицинский институт" }
     },
     "pageTitle": "Работы, которые поднимают планку",
     "pageLead": "Подборка AI, веб, мобильных и enterprise-программ с безупречной полировкой."
