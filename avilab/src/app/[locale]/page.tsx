@@ -64,7 +64,7 @@ export default function HomePage() {
       <Navbar />
       <main>
         <Hero />
-        <TrustedCompanies />
+        {/* <TrustedCompanies /> */}
         <Services />
         <About />
         <Technologies />
@@ -72,7 +72,7 @@ export default function HomePage() {
         <Process />
         <Team />
         <Achievements />
-        <Testimonials />
+        {/* <Testimonials /> */}
         {/* <Pricing /> */}
         <FAQ />
         <ApplicationForm />

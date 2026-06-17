@@ -182,7 +182,7 @@ export function Portfolio({ compact }: { compact?: boolean }) {
                           <ExternalLink className="mr-1.5 size-3.5" />
                           {tc("livePreview")}
                         </a>
-                        <Link
+                        {/* <Link
                           href="/"
                           className={cn(
                             buttonVariants({ variant: "outline" }),
@@ -191,7 +191,7 @@ export function Portfolio({ compact }: { compact?: boolean }) {
                         >
                           <FileText className="mr-1.5 size-3.5" />
                           {tc("caseStudy")}
-                        </Link>
+                        </Link> */}
                       </div>
                     </div>
                   </div>

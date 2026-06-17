@@ -179,7 +179,7 @@ function TeamCard({
             </span>
           ))}
         </div>
-        <div className="mt-4 flex gap-2">
+        {/* <div className="mt-4 flex gap-2">
           <Link
             href={member.social.linkedin}
             className="inline-flex size-9 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-slate-300 transition-colors hover:border-avilab-glow/40 hover:text-white"
@@ -201,7 +201,7 @@ function TeamCard({
           >
             <AtSign className="size-4" />
           </Link>
-        </div>
+        </div> */}
       </div>
     </motion.article>
   )

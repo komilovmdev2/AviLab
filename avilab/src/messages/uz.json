@@ -323,7 +323,7 @@
     "items": {
       "timelines": {
         "q": "Loyiha muddatlari qanday ishlaydi?",
-        "a": "Haftalik demo bilan fokuslangan bosqichlarda ishlaymiz. Ko‘pchilik MVP lar 8–12 haftada; korporativ dasturlar xarid va muvofiqlik ritmingizga moslanadi."
+        "a": "Haftalik demo bilan fokuslangan bosqichlarda ishlaymiz. Ko‘pchilik MVP lar 1–4 haftada; korporativ dasturlar xarid va muvofiqlik ritmingizga moslanadi."
       },
       "pricing": {
         "q": "Narxlar qanday tuziladi?",
@@ -356,6 +356,7 @@
       "companyName": "Kompaniya nomi",
       "telegram": "Telegram foydalanuvchi nomi",
       "email": "Email",
+      "phone": "Telefon raqami",
       "serviceType": "Xizmat turi",
       "budget": "Byudjet",
       "deadline": "Maqsadli muddat",
@@ -374,6 +375,7 @@
       "company": "Northwind Labs",
       "telegram": "@avilab",
       "email": "you@company.com",
+      "phone": "+998 90 123 45 67",
       "description": "Maqsadlar, foydalanuvchilar, integratsiyalar, muvaffaqiyat metrikalari…"
     },
     "budgetLabels": {
@@ -391,7 +393,8 @@
       "serviceType": "Xizmatni tanlang",
       "budget": "Byudjet oralig‘ini tanlang",
       "deadline": "Muddat majburiy",
-      "projectDescription": "Loyihani tasvirlang (10+ belgi)"
+      "projectDescription": "Loyihani tasvirlang (10+ belgi)",
+      "phone": "To‘g‘ri telefon raqamini kiriting"
     }
   },
   "contact": {

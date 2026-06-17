@@ -102,7 +102,7 @@
     "items": {
       "timelines": {
         "q": "How long does a project take?",
-        "a": "We usually deliver within 8–14 weeks depending on scope."
+        "a": "We usually deliver within 1-4 weeks depending on scope."
       },
       "pricing": {
         "q": "How are prices structured?",
@@ -385,6 +385,7 @@
       "dropzone": "Drag files here or click to upload",
       "dropzoneHint": "Supported formats: PDF, DOCX, PNG",
       "email": "Email address",
+      "phone": "Phone number",
       "errorGeneric": "Something went wrong. Please try again.",
       "eyebrow": "Apply now",
       "fullName": "Full name",
@@ -405,12 +406,14 @@
       "fullName": "Please enter your full name.",
       "projectDescription": "Please describe your project in more detail.",
       "serviceType": "Please choose a service.",
-      "telegramUsername": "Please enter your Telegram username."
+      "telegramUsername": "Please enter your Telegram username.",
+      "phone": "Please enter a valid phone number."
     },
     "placeholders": {
       "company": "Acme Ltd",
       "description": "Describe the scope, goals, and timeline.",
       "email": "your@email.com",
+      "phone": "+998 90 123 45 67",
       "fullName": "Jane Doe",
       "telegram": "@username"
     },

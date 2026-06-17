@@ -9,14 +9,24 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { applicationBudgets, serviceItems } from "@/lib/site-config"
+import { serviceItems } from "@/lib/site-config"
 import { cn } from "@/lib/utils"
+
+const emptyForm = {
+  fullName: "",
+  companyName: "",
+  telegramUsername: "",
+  phone: "",
+  email: "",
+  serviceType: "",
+  deadline: "",
+  projectDescription: "",
+}
 
 export function ApplicationForm() {
   const t = useTranslations("forms.application")
   const tv = useTranslations("forms.validation")
   const tp = useTranslations("forms.placeholders")
-  const tb = useTranslations("forms.budgetLabels")
   const ts = useTranslations("services.items")
   const tc = useTranslations("common")
 
@@ -26,18 +36,38 @@ export function ApplicationForm() {
         fullName: z.string().min(2, tv("fullName")),
         companyName: z.string().min(1, tv("companyName")),
         telegramUsername: z.string().min(1, tv("telegramUsername")),
+        phone: z
+          .string()
+          .trim()
+          .min(9, tv("phone"))
+          .regex(/^[\d\s+\-()]+$/, tv("phone")),
         email: z.string().email(tv("email")),
         serviceType: z.string().min(1, tv("serviceType")),
-        budget: z.string().min(1, tv("budget")),
         deadline: z.string().min(1, tv("deadline")),
         projectDescription: z.string().min(10, tv("projectDescription")),
       }),
     [tv]
   )
 
+  const [formValues, setFormValues] = useState(emptyForm)
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle")
   const [message, setMessage] = useState("")
   const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({})
+
+  const isFormReady = useMemo(
+    () => schema.safeParse(formValues).success,
+    [formValues, schema]
+  )
+
+  function updateField<K extends keyof typeof emptyForm>(key: K, value: string) {
+    setFormValues((prev) => ({ ...prev, [key]: value }))
+    setFieldErrors((prev) => {
+      if (!prev[key]) return prev
+      const next = { ...prev }
+      delete next[key]
+      return next
+    })
+  }
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
@@ -45,14 +75,7 @@ export function ApplicationForm() {
     const form = e.currentTarget
     const fd = new FormData(form)
     const raw = {
-      fullName: String(fd.get("fullName") ?? ""),
-      companyName: String(fd.get("companyName") ?? ""),
-      telegramUsername: String(fd.get("telegramUsername") ?? ""),
-      email: String(fd.get("email") ?? ""),
-      serviceType: String(fd.get("serviceType") ?? ""),
-      budget: String(fd.get("budget") ?? ""),
-      deadline: String(fd.get("deadline") ?? ""),
-      projectDescription: String(fd.get("projectDescription") ?? ""),
+      ...formValues,
     }
     const parsed = schema.safeParse(raw)
     if (!parsed.success) {
@@ -74,6 +97,7 @@ export function ApplicationForm() {
       setStatus("success")
       setMessage(t("success"))
       form.reset()
+      setFormValues(emptyForm)
     } catch {
       setStatus("error")
       setMessage(t("errorGeneric"))
@@ -128,6 +152,8 @@ export function ApplicationForm() {
               <Input
                 id="fullName"
                 name="fullName"
+                value={formValues.fullName}
+                onChange={(e) => updateField("fullName", e.target.value)}
                 className={cn(inputClass, "h-11")}
                 placeholder={tp("fullName")}
                 aria-invalid={!!fieldErrors.fullName}
@@ -143,6 +169,8 @@ export function ApplicationForm() {
               <Input
                 id="companyName"
                 name="companyName"
+                value={formValues.companyName}
+                onChange={(e) => updateField("companyName", e.target.value)}
                 className={cn(inputClass, "h-11")}
                 placeholder={tp("company")}
                 aria-invalid={!!fieldErrors.companyName}
@@ -158,12 +186,32 @@ export function ApplicationForm() {
               <Input
                 id="telegramUsername"
                 name="telegramUsername"
+                value={formValues.telegramUsername}
+                onChange={(e) => updateField("telegramUsername", e.target.value)}
                 className={cn(inputClass, "h-11")}
                 placeholder={tp("telegram")}
                 aria-invalid={!!fieldErrors.telegramUsername}
               />
               {fieldErrors.telegramUsername ? (
                 <p className="text-xs text-red-400">{fieldErrors.telegramUsername}</p>
+              ) : null}
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="phone" className="text-slate-300">
+                {t("phone")}
+              </Label>
+              <Input
+                id="phone"
+                name="phone"
+                type="tel"
+                value={formValues.phone}
+                onChange={(e) => updateField("phone", e.target.value)}
+                className={cn(inputClass, "h-11")}
+                placeholder={tp("phone")}
+                aria-invalid={!!fieldErrors.phone}
+              />
+              {fieldErrors.phone ? (
+                <p className="text-xs text-red-400">{fieldErrors.phone}</p>
               ) : null}
             </div>
             <div className="space-y-2">
@@ -174,6 +222,8 @@ export function ApplicationForm() {
                 id="email"
                 name="email"
                 type="email"
+                value={formValues.email}
+                onChange={(e) => updateField("email", e.target.value)}
                 className={cn(inputClass, "h-11")}
                 placeholder={tp("email")}
                 aria-invalid={!!fieldErrors.email}
@@ -189,11 +239,12 @@ export function ApplicationForm() {
               <select
                 id="serviceType"
                 name="serviceType"
+                value={formValues.serviceType}
+                onChange={(e) => updateField("serviceType", e.target.value)}
                 className={cn(
                   inputClass,
                   "h-11 w-full px-3 outline-none focus-visible:ring-2"
                 )}
-                defaultValue=""
                 aria-invalid={!!fieldErrors.serviceType}
               >
                 <option value="" disabled className="bg-avilab-surface text-slate-800">
@@ -245,6 +296,8 @@ export function ApplicationForm() {
               id="deadline"
               name="deadline"
               type="date"
+              value={formValues.deadline}
+              onChange={(e) => updateField("deadline", e.target.value)}
               className={cn(inputClass, "h-11")}
               aria-invalid={!!fieldErrors.deadline}
             />
@@ -260,6 +313,8 @@ export function ApplicationForm() {
               id="projectDescription"
               name="projectDescription"
               rows={5}
+              value={formValues.projectDescription}
+              onChange={(e) => updateField("projectDescription", e.target.value)}
               className={cn(inputClass, "min-h-[140px] resize-y")}
               placeholder={tp("description")}
               aria-invalid={!!fieldErrors.projectDescription}
@@ -294,7 +349,7 @@ export function ApplicationForm() {
           ) : null}
           <Button
             type="submit"
-            disabled={status === "loading"}
+            disabled={status === "loading" || !isFormReady}
             className="h-12 w-full rounded-2xl bg-gradient-to-r from-avilab-accent to-avilab-glow text-base text-white shadow-[0_0_32px_rgb(56_189_248/0.35)] disabled:opacity-60"
           >
             {status === "loading" ? (

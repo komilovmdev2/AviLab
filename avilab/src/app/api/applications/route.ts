@@ -5,29 +5,15 @@ const applicationSchema = z.object({
   fullName: z.string().min(2),
   companyName: z.string().min(1),
   telegramUsername: z.string().min(1),
+  phone: z.string().trim().min(9).regex(/^[\d\s+\-()]+$/),
   email: z.string().email(),
   serviceType: z.string().min(1),
-  budget: z.string().min(1),
+  budget: z.string().optional(),
   deadline: z.string().min(1),
   projectDescription: z.string().min(10),
 })
 
-function formatTelegramMessage(data: z.infer<typeof applicationSchema>, fileName: string | null) {
-  const lines = [
-    "<b>New AviLab application</b>",
-    "",
-    `<b>Name:</b> ${escapeHtml(data.fullName)}`,
-    `<b>Company:</b> ${escapeHtml(data.companyName)}`,
-    `<b>Telegram:</b> ${escapeHtml(data.telegramUsername)}`,
-    `<b>Email:</b> ${escapeHtml(data.email)}`,
-    `<b>Service:</b> ${escapeHtml(data.serviceType)}`,
-    `<b>Budget:</b> ${escapeHtml(data.budget)}`,
-    `<b>Deadline:</b> ${escapeHtml(data.deadline)}`,
-    `<b>Description:</b> ${escapeHtml(data.projectDescription)}`,
-  ]
-  if (fileName) lines.push("", `<b>Attachment:</b> ${escapeHtml(fileName)}`)
-  return lines.join("\n")
-}
+type ApplicationData = z.infer<typeof applicationSchema>
 
 function escapeHtml(s: string) {
   return s
@@ -36,27 +22,70 @@ function escapeHtml(s: string) {
     .replaceAll(">", "&gt;")
 }
 
+function getTelegramAdminIds(): string[] {
+  const raw = process.env.TELEGRAM_ADMIN_IDS ?? process.env.TELEGRAM_CHAT_ID ?? ""
+  return raw
+    .split(",")
+    .map((id) => id.trim())
+    .filter(Boolean)
+}
+
+function formatTelegramMessage(data: ApplicationData, fileName: string | null) {
+  const lines = [
+    "<b>🆕 Yangi AviLab arizasi</b>",
+    "",
+    `<b>Ism:</b> ${escapeHtml(data.fullName)}`,
+    `<b>Kompaniya:</b> ${escapeHtml(data.companyName)}`,
+    `<b>Telegram:</b> ${escapeHtml(data.telegramUsername)}`,
+    `<b>Telefon:</b> ${escapeHtml(data.phone)}`,
+    `<b>Email:</b> ${escapeHtml(data.email)}`,
+    `<b>Xizmat:</b> ${escapeHtml(data.serviceType)}`,
+    `<b>Muddat:</b> ${escapeHtml(data.deadline)}`,
+    `<b>Tavsif:</b> ${escapeHtml(data.projectDescription)}`,
+  ]
+
+  if (data.budget) {
+    lines.splice(8, 0, `<b>Byudjet:</b> ${escapeHtml(data.budget)}`)
+  }
+  if (fileName) lines.push("", `<b>Fayl:</b> ${escapeHtml(fileName)}`)
+
+  return lines.join("\n")
+}
+
 async function sendTelegramMessage(text: string) {
   const token = process.env.TELEGRAM_BOT_TOKEN
-  const chatId = process.env.TELEGRAM_CHAT_ID
-  if (!token || !chatId) return { ok: false as const, skipped: true as const }
-
-  const res = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      chat_id: chatId,
-      text,
-      parse_mode: "HTML",
-      disable_web_page_preview: true,
-    }),
-  })
-  if (!res.ok) {
-    const err = await res.text()
-    console.error("Telegram sendMessage failed:", err)
-    return { ok: false as const, skipped: false as const }
+  const adminIds = getTelegramAdminIds()
+  if (!token || adminIds.length === 0) {
+    return { ok: false as const, skipped: true as const }
   }
-  return { ok: true as const, skipped: false as const }
+
+  const results = await Promise.all(
+    adminIds.map(async (chatId) => {
+      const res = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          chat_id: chatId,
+          text,
+          parse_mode: "HTML",
+          disable_web_page_preview: true,
+        }),
+      })
+
+      if (!res.ok) {
+        const err = await res.text()
+        console.error(`Telegram sendMessage failed for ${chatId}:`, err)
+        return false
+      }
+
+      return true
+    })
+  )
+
+  return {
+    ok: results.some(Boolean),
+    skipped: false as const,
+  }
 }
 
 async function sendTelegramDocument(token: string, chatId: string, file: File) {
@@ -67,10 +96,10 @@ async function sendTelegramDocument(token: string, chatId: string, file: File) {
     method: "POST",
     body: form,
   })
-  if (!res.ok) console.error("Telegram sendDocument failed:", await res.text())
+  if (!res.ok) console.error(`Telegram sendDocument failed for ${chatId}:`, await res.text())
 }
 
-async function saveToSupabaseRow(data: z.infer<typeof applicationSchema>, fileName: string | null) {
+async function saveToSupabaseRow(data: ApplicationData, fileName: string | null) {
   const url = process.env.SUPABASE_URL
   const key = process.env.SUPABASE_SERVICE_ROLE_KEY
   if (!url || !key) return
@@ -92,10 +121,7 @@ async function saveToSupabaseRow(data: z.infer<typeof applicationSchema>, fileNa
   if (!res.ok) console.error("Supabase insert failed:", await res.text())
 }
 
-async function sendEmailNotification(
-  data: z.infer<typeof applicationSchema>,
-  fileName: string | null
-) {
+async function sendEmailNotification(data: ApplicationData, fileName: string | null) {
   const apiKey = process.env.RESEND_API_KEY
   const to = process.env.NOTIFICATION_EMAIL
   const from = process.env.RESEND_FROM ?? "AviLab <onboarding@resend.dev>"
@@ -106,9 +132,10 @@ async function sendEmailNotification(
     <p><strong>Name:</strong> ${escapeHtml(data.fullName)}</p>
     <p><strong>Company:</strong> ${escapeHtml(data.companyName)}</p>
     <p><strong>Telegram:</strong> ${escapeHtml(data.telegramUsername)}</p>
+    <p><strong>Phone:</strong> ${escapeHtml(data.phone)}</p>
     <p><strong>Email:</strong> ${escapeHtml(data.email)}</p>
     <p><strong>Service:</strong> ${escapeHtml(data.serviceType)}</p>
-    <p><strong>Budget:</strong> ${escapeHtml(data.budget)}</p>
+    ${data.budget ? `<p><strong>Budget:</strong> ${escapeHtml(data.budget)}</p>` : ""}
     <p><strong>Deadline:</strong> ${escapeHtml(data.deadline)}</p>
     <p><strong>Description:</strong></p>
     <p>${escapeHtml(data.projectDescription)}</p>
@@ -140,9 +167,10 @@ export async function POST(req: Request) {
     fullName: String(formData.get("fullName") ?? ""),
     companyName: String(formData.get("companyName") ?? ""),
     telegramUsername: String(formData.get("telegramUsername") ?? ""),
+    phone: String(formData.get("phone") ?? ""),
     email: String(formData.get("email") ?? ""),
     serviceType: String(formData.get("serviceType") ?? ""),
-    budget: String(formData.get("budget") ?? ""),
+    budget: String(formData.get("budget") ?? "").trim() || undefined,
     deadline: String(formData.get("deadline") ?? ""),
     projectDescription: String(formData.get("projectDescription") ?? ""),
   }
@@ -160,9 +188,9 @@ export async function POST(req: Request) {
   const tg = await sendTelegramMessage(message)
 
   const token = process.env.TELEGRAM_BOT_TOKEN
-  const chatId = process.env.TELEGRAM_CHAT_ID
-  if (attachment && token && chatId && attachment.size <= 15 * 1024 * 1024) {
-    await sendTelegramDocument(token, chatId, attachment)
+  const adminIds = getTelegramAdminIds()
+  if (attachment && token && adminIds.length > 0 && attachment.size <= 15 * 1024 * 1024) {
+    await Promise.all(adminIds.map((chatId) => sendTelegramDocument(token, chatId, attachment)))
   }
 
   await saveToSupabaseRow(parsed.data, fileName)
