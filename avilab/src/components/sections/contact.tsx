@@ -6,9 +6,9 @@ import { useTranslations } from "next-intl"
 import { cn } from "@/lib/utils"
 
 const socialKeys = [
-  { key: "socialTwitter" as const, href: "https://twitter.com" },
-  { key: "socialLinkedin" as const, href: "https://linkedin.com" },
-  { key: "socialGithub" as const, href: "https://github.com" },
+  { key: "instagram" as const, href: "https://instagram.com/avilab.uz" },
+  { key: "linkedin" as const, href: "https://linkedin.com/company/avilab" },
+  { key: "telegram" as const, href: "https://t.me/avilab_uz" },
 ]
 
 export function Contact({ compact }: { compact?: boolean }) {
@@ -74,10 +74,10 @@ export function Contact({ compact }: { compact?: boolean }) {
                 <div>
                   <p className="text-sm font-medium text-white">{t("telegramTitle")}</p>
                   <a
-                    href="https://t.me/avilab"
+                    href="https://t.me/avilab_uz"
                     className="text-sm text-avilab-glow hover:underline"
                   >
-                    t.me/avilab
+                    t.me/avilab_uz
                   </a>
                 </div>
               </motion.div>
