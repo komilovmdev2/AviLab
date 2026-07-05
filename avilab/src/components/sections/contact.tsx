@@ -91,8 +91,8 @@ export function Contact({ compact }: { compact?: boolean }) {
                 <Mail className="mt-0.5 size-5 shrink-0 text-avilab-glow" aria-hidden />
                 <div>
                   <p className="text-sm font-medium text-white">{t("emailTitle")}</p>
-                  <a href="mailto:abdula_9146@icloud.com" className="text-sm text-avilab-glow hover:underline">
-                    abdula_9146@icloud.com
+                  <a href="mailto:avilab.com@gmail.com" className="text-sm text-avilab-glow hover:underline">
+                    avilab.com@gmail.com
                   </a>
                 </div>
               </motion.div>
