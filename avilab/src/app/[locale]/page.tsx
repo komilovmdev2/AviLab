@@ -1,8 +1,8 @@
 import type { Metadata } from "next"
 import { getTranslations } from "next-intl/server"
-import { Achievements } from "@/components/sections/achievements"
 import { About } from "@/components/sections/about"
 import { ApplicationForm } from "@/components/sections/application-form"
+import { CompanyVideo } from "@/components/sections/company-video"
 import { Contact } from "@/components/sections/contact"
 import { FAQ } from "@/components/sections/faq"
 import { Hero } from "@/components/sections/hero"
@@ -19,6 +19,9 @@ import { Navbar } from "@/components/site/navbar"
 import { openGraphLocale } from "@/lib/i18n-utils"
 import { languageAlternates, siteOrigin } from "@/lib/seo"
 import { routing } from "@/i18n/routing"
+import { getPublicPortfolioForLocale } from "@/lib/portfolio-data"
+import { getPublicTeamData } from "@/lib/team-data"
+import { getPublicCompanyVideoUrl } from "@/lib/company-video-data"
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -58,7 +61,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-export default function HomePage() {
+export default async function HomePage({ params }: Props) {
+  const { locale } = await params
+  const portfolioItems = await getPublicPortfolioForLocale(locale)
+  const { members: teamMembers, moments: teamMoments } = await getPublicTeamData()
+  const companyVideoUrl = await getPublicCompanyVideoUrl()
+
   return (
     <>
       <Navbar />
@@ -68,10 +76,10 @@ export default function HomePage() {
         <Services />
         <About />
         <Technologies />
-        <Portfolio />
+        <Portfolio items={portfolioItems} />
         <Process />
-        <Team />
-        <Achievements />
+        <Team members={teamMembers} moments={teamMoments} />
+        <CompanyVideo videoUrl={companyVideoUrl} />
         {/* <Testimonials /> */}
         {/* <Pricing /> */}
         <FAQ />

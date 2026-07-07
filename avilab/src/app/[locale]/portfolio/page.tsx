@@ -5,6 +5,7 @@ import { Footer } from "@/components/site/footer"
 import { Navbar } from "@/components/site/navbar"
 import { SubpageHeader } from "@/components/site/subpage-header"
 import { openGraphLocale } from "@/lib/i18n-utils"
+import { getPublicPortfolioForLocale } from "@/lib/portfolio-data"
 import { languageAlternates, siteOrigin } from "@/lib/seo"
 import { routing } from "@/i18n/routing"
 
@@ -40,13 +41,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-export default function PortfolioPage() {
+export default async function PortfolioPage({ params }: Props) {
+  const { locale } = await params
+  const portfolioItems = await getPublicPortfolioForLocale(locale)
+
   return (
     <>
       <Navbar />
       <main>
         <SubpageHeader namespace="portfolio" />
-        <Portfolio compact />
+        <Portfolio items={portfolioItems} compact />
       </main>
       <Footer />
     </>

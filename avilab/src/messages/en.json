@@ -17,6 +17,7 @@
   "common": {
     "brand": "AviLab",
     "caseStudy": "Case Study",
+    "close": "Close",
     "copyright": "All rights reserved.",
     "ctaExplore": "Explore portfolio",
     "healthy": "Healthy business rules",
@@ -32,7 +33,7 @@
     "services": "Services",
     "portfolio": "Portfolio",
     "team": "Team",
-    "achievements": "Achievements",
+    "companyVideo": "About us",
     "contact": "Contact",
     "language": "Language",
     "openMenu": "Open menu",
@@ -70,31 +71,11 @@
       "countries": "Countries served"
     }
   },
-  "achievements": {
-    "eyebrow": "Achievements",
-    "title": "Milestones we’re proud of.",
-    "items": {
-      "aiSummit": {
-        "title": "AI Summit Award",
-        "detail": "Recognized as a leading innovator in intelligent systems."
-      },
-      "awsPartner": {
-        "title": "AWS Partner",
-        "detail": "Certified partner delivering reliable cloud solutions."
-      },
-      "hackathon": {
-        "title": "Hackathon Winner",
-        "detail": "Selected as best AI experience in a major event."
-      },
-      "iso27001": {
-        "title": "ISO 27001 Certified",
-        "detail": "Secure development practices aligned with global standards."
-      },
-      "fortune500": {
-        "title": "Fortune 500 Adoption",
-        "detail": "Trusted by enterprise teams for mission-critical projects."
-      }
-    }
+  "companyVideo": {
+    "eyebrow": "About us",
+    "title": "See AviLab in motion.",
+    "play": "Play video",
+    "close": "Close video"
   },
   "faq": {
     "eyebrow": "FAQ",
@@ -216,7 +197,8 @@
       "lumenDesign": { "title": "CleanWay" },
       "vertexErp": { "title": "ShifoGO" },
       "helixVision": { "title": "Med Institute" }
-    }
+    },
+    "empty": "New projects are coming soon."
   },
   "contact": {
     "pageTitle": "Contact",
@@ -290,6 +272,7 @@
   "team": {
     "eyebrow": "Team",
     "title": "A multidisciplinary team of builders.",
+    "description": "Engineers, designers, and data scientists shipping AI, web, and mobile products end to end.",
     "socialGitHub": "GitHub profile",
     "socialLinkedIn": "LinkedIn profile",
     "socialTwitter": "Twitter profile",
@@ -427,17 +410,5 @@
       "tier4": "$30k+",
       "tierUnsure": "Not sure yet"
     }
-  },
-  "services.items": {
-    "aiDev": { "title": "AI Development" },
-    "webDev": { "title": "Web Development" },
-    "mobile": { "title": "Mobile Apps" },
-    "uiux": { "title": "UI/UX Design" },
-    "crmErp": { "title": "CRM / ERP" },
-    "telegramBots": { "title": "Telegram Bots" },
-    "saas": { "title": "SaaS Platforms" },
-    "cloud": { "title": "Cloud Infrastructure" },
-    "branding": { "title": "Branding" },
-    "security": { "title": "Security" }
   }
 }

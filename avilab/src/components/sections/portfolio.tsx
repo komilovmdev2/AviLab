@@ -1,16 +1,12 @@
 "use client"
 
 import { AnimatePresence, motion } from "framer-motion"
-import Image from "next/image"
-import { ExternalLink, FileText } from "lucide-react"
+import { ExternalLink, Play } from "lucide-react"
 import { useTranslations } from "next-intl"
 import { useMemo, useState } from "react"
 import { buttonVariants } from "@/components/ui/button"
-import { Link } from "@/i18n/navigation"
-import {
-  portfolioItems,
-  type PortfolioCategoryId,
-} from "@/lib/site-config"
+import { VideoLightbox } from "@/components/effects/video-lightbox"
+import type { PortfolioCategoryId, PortfolioItem } from "@/backend/types"
 import { cn } from "@/lib/utils"
 
 const categoryOrder: PortfolioCategoryId[] = [
@@ -23,15 +19,16 @@ const categoryOrder: PortfolioCategoryId[] = [
 
 type Filter = "all" | PortfolioCategoryId
 
-export function Portfolio({ compact }: { compact?: boolean }) {
+export function Portfolio({ items, compact }: { items: PortfolioItem[]; compact?: boolean }) {
   const t = useTranslations("portfolio")
   const tc = useTranslations("common")
   const [filter, setFilter] = useState<Filter>("all")
+  const [activeVideo, setActiveVideo] = useState<PortfolioItem | null>(null)
 
   const filtered = useMemo(() => {
-    if (filter === "all") return [...portfolioItems]
-    return portfolioItems.filter((p) => p.category === filter)
-  }, [filter])
+    if (filter === "all") return items
+    return items.filter((p) => p.category === filter)
+  }, [filter, items])
 
   return (
     <section id="portfolio" className={cn("relative", compact ? "pb-24 md:pb-32" : "py-24 md:py-32")}>
@@ -127,80 +124,108 @@ export function Portfolio({ compact }: { compact?: boolean }) {
           </motion.div>
         )}
 
-        <motion.div layout className={cn("columns-1 gap-4 sm:columns-2 lg:columns-3", !compact && "mt-14")}>
-          <AnimatePresence mode="popLayout">
-            {filtered.map((project) => (
-              <motion.article
-                layout
-                key={project.id}
-                initial={{ opacity: 0, scale: 0.96 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.96 }}
-                transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-                className="group mb-4 break-inside-avoid"
-              >
-                <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-avilab-surface/40 shadow-[0_0_0_1px_rgb(255_255_255/0.04)_inset]">
-                  <div className="relative aspect-[4/3] overflow-hidden">
-                    <Image
-                      src={project.image}
-                      alt={t(`items.${project.id}.title`)}
-                      fill
-                      className="object-cover transition duration-700 group-hover:scale-105"
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#050816] via-[#050816]/40 to-transparent opacity-90 transition-opacity group-hover:opacity-95" />
-                    <div className="absolute inset-0 opacity-0 transition-opacity group-hover:opacity-100">
-                      <div className="absolute inset-0 bg-gradient-to-tr from-avilab-accent/25 via-transparent to-avilab-violet/20" />
-                    </div>
-                    <div className="absolute right-4 bottom-4 left-4 flex flex-col gap-3">
-                      <span className="w-fit rounded-full bg-white/10 px-2.5 py-0.5 text-[10px] font-medium tracking-wider text-avilab-glow uppercase backdrop-blur-md">
-                        {t(`categories.${project.category}`)}
-                      </span>
-                      <h3 className="font-heading text-xl font-semibold text-white">
-                        {t(`items.${project.id}.title`)}
-                      </h3>
-                      <div className="flex flex-wrap gap-1.5">
-                        {project.stack.map((stack) => (
-                          <span
-                            key={stack}
-                            className="rounded-md border border-white/10 bg-black/40 px-2 py-0.5 text-[10px] text-slate-300"
-                          >
-                            {stack}
-                          </span>
-                        ))}
+        {filtered.length === 0 ? (
+          <p className={cn("text-center text-sm text-slate-500", !compact && "mt-14")}>
+            {t("empty")}
+          </p>
+        ) : (
+          <motion.div layout className={cn("columns-1 gap-4 sm:columns-2 lg:columns-3", !compact && "mt-14")}>
+            <AnimatePresence mode="popLayout">
+              {filtered.map((project) => (
+                <motion.article
+                  layout
+                  key={project.id}
+                  initial={{ opacity: 0, scale: 0.96 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.96 }}
+                  transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+                  className="group mb-4 break-inside-avoid"
+                >
+                  <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-avilab-surface/40 shadow-[0_0_0_1px_rgb(255_255_255/0.04)_inset]">
+                    <div className="relative aspect-[4/3] overflow-hidden">
+                      {project.thumbnailUrl ? (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img
+                          src={project.thumbnailUrl}
+                          alt={project.title}
+                          className="absolute inset-0 size-full object-cover transition duration-700 group-hover:scale-105"
+                        />
+                      ) : project.videoUrl ? (
+                        <video
+                          src={project.videoUrl}
+                          muted
+                          loop
+                          playsInline
+                          autoPlay
+                          className="absolute inset-0 size-full object-cover transition duration-700 group-hover:scale-105"
+                        />
+                      ) : (
+                        <div className="absolute inset-0 bg-gradient-to-br from-avilab-accent/20 to-avilab-violet/20" />
+                      )}
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#050816] via-[#050816]/40 to-transparent opacity-90 transition-opacity group-hover:opacity-95" />
+                      <div className="absolute inset-0 opacity-0 transition-opacity group-hover:opacity-100">
+                        <div className="absolute inset-0 bg-gradient-to-tr from-avilab-accent/25 via-transparent to-avilab-violet/20" />
                       </div>
-                      <div className="flex flex-wrap gap-2 pt-1">
-                        <a
-                          href={project.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className={cn(
-                            buttonVariants(),
-                            "h-9 rounded-xl border-0 bg-white text-black hover:bg-white/90"
-                          )}
+                      {project.videoUrl ? (
+                        <button
+                          type="button"
+                          onClick={() => setActiveVideo(project)}
+                          aria-label={project.title}
+                          className="absolute inset-0 flex items-center justify-center"
                         >
-                          <ExternalLink className="mr-1.5 size-3.5" />
-                          {tc("livePreview")}
-                        </a>
-                        {/* <Link
-                          href="/"
-                          className={cn(
-                            buttonVariants({ variant: "outline" }),
-                            "h-9 rounded-xl border-white/15 bg-white/5 text-white hover:bg-white/10"
-                          )}
-                        >
-                          <FileText className="mr-1.5 size-3.5" />
-                          {tc("caseStudy")}
-                        </Link> */}
+                          <span className="flex size-14 items-center justify-center rounded-full bg-white/15 backdrop-blur-md transition-transform group-hover:scale-110">
+                            <Play className="ml-0.5 size-6 fill-white text-white" aria-hidden />
+                          </span>
+                        </button>
+                      ) : null}
+                      <div className="absolute right-4 bottom-4 left-4 flex flex-col gap-3">
+                        <span className="w-fit rounded-full bg-white/10 px-2.5 py-0.5 text-[10px] font-medium tracking-wider text-avilab-glow uppercase backdrop-blur-md">
+                          {t(`categories.${project.category}`)}
+                        </span>
+                        <h3 className="font-heading text-xl font-semibold text-white">
+                          {project.title}
+                        </h3>
+                        <div className="flex flex-wrap gap-1.5">
+                          {project.stack.map((stack) => (
+                            <span
+                              key={stack}
+                              className="rounded-md border border-white/10 bg-black/40 px-2 py-0.5 text-[10px] text-slate-300"
+                            >
+                              {stack}
+                            </span>
+                          ))}
+                        </div>
+                        {project.projectUrl ? (
+                          <div className="flex flex-wrap gap-2 pt-1">
+                            <a
+                              href={project.projectUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className={cn(
+                                buttonVariants(),
+                                "h-9 rounded-xl border-0 bg-white text-black hover:bg-white/90"
+                              )}
+                            >
+                              <ExternalLink className="mr-1.5 size-3.5" />
+                              {tc("livePreview")}
+                            </a>
+                          </div>
+                        ) : null}
                       </div>
                     </div>
                   </div>
-                </div>
-              </motion.article>
-            ))}
-          </AnimatePresence>
-        </motion.div>
+                </motion.article>
+              ))}
+            </AnimatePresence>
+          </motion.div>
+        )}
       </div>
+
+      <VideoLightbox
+        videoUrl={activeVideo?.videoUrl ?? null}
+        onClose={() => setActiveVideo(null)}
+        closeLabel={tc("close")}
+      />
     </section>
   )
 }

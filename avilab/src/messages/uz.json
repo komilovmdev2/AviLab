@@ -5,6 +5,7 @@
     "ctaExplore": "Kashf etish",
     "livePreview": "Jonli ko‘rinish",
     "caseStudy": "Keys study",
+    "close": "Yopish",
     "healthy": "Barqaror",
     "submitting": "Yuborilmoqda…",
     "subscribe": "Obuna",
@@ -41,7 +42,7 @@
     "services": "Xizmatlar",
     "portfolio": "Portfolio",
     "team": "Jamoa",
-    "achievements": "Yutuqlar",
+    "companyVideo": "Biz haqimizda",
     "contact": "Aloqa",
     "startProject": "Loyiha boshlash",
     "openMenu": "Menyuni ochish/yopish",
@@ -184,7 +185,8 @@
       "helixVision": { "title": "Med instituti" }
     },
     "pageTitle": "Standartni ko‘taradigan ishlar",
-    "pageLead": "Kinematik puxtalik bilan yetkazilgan AI, veb, mobil va korporativ dasturlar tanlovi."
+    "pageLead": "Kinematik puxtalik bilan yetkazilgan AI, veb, mobil va korporativ dasturlar tanlovi.",
+    "empty": "Tez orada yangi loyihalar qo'shiladi."
   },
   "process": {
     "eyebrow": "Jarayon",
@@ -219,6 +221,7 @@
   "team": {
     "eyebrow": "Jamoa",
     "title": "Arxitektorlar, dizaynerlar va operatorlar bitta ekipajda",
+    "description": "AI, veb va mobil mahsulotlarni boshidan oxirigacha yetkazadigan muhandislar, dizaynerlar va data science mutaxassislari.",
     "members": {
       "alex": { "role": "Asoschilar va CTO" },
       "maya": { "role": "Yetakchi mahsulot dizayneri" },
@@ -229,31 +232,11 @@
     "socialGitHub": "GitHub",
     "socialTwitter": "Twitter"
   },
-  "achievements": {
-    "eyebrow": "Yutuqlar",
-    "title": "O‘rtacha ishlashga yo‘l qo‘ymaydigan maydonlardan dalillar",
-    "items": {
-      "aiSummit": {
-        "title": "Global AI Summit — eng yaxshi amaliy tadqiqot",
-        "detail": "Korporativ masshtabda ishlab chiqarish RAG arxitekturasi uchun tan olindi."
-      },
-      "awsPartner": {
-        "title": "AWS Advanced Tier hamkori",
-        "detail": "Sertifikatlangan bulut yetkazish va well-architected amaliyotlar."
-      },
-      "hackathon": {
-        "title": "Xalqaro hakaton — bosh sovrin",
-        "detail": "120 jamoa orasida real vaqt intellekt platformasi uchun birinchi o‘rin."
-      },
-      "iso27001": {
-        "title": "ISO 27001 ga muvofiqlik",
-        "detail": "Korporativ xarid talablariga moslashtirilgan xavfsizlik dasturi."
-      },
-      "fortune500": {
-        "title": "Fortune 500 ishga tushirish hamkori",
-        "detail": "Global chakana savdo uchun missiyaga muhim ichki vositalar yetkazildi."
-      }
-    }
+  "companyVideo": {
+    "eyebrow": "Biz haqimizda",
+    "title": "AviLab'ni harakatda ko‘ring.",
+    "play": "Videoni ko‘rish",
+    "close": "Yopish"
   },
   "testimonials": {
     "eyebrow": "Sharhlar",
